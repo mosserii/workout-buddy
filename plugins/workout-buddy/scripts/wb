@@ -1,0 +1,19 @@
+#!/bin/sh
+# Workout Buddy launcher: finds python3 on PATH and runs workout.py next to this file.
+# Usage: wb [--home DIR] <subcommand> [args...]
+#   --home DIR   use DIR as the data dir (sets WORKOUT_HOME); the band passes it so its button
+#                presses land in the same data dir as the hooks.
+# A missing python3 prints one line to stderr and exits 0, so it never blocks a prompt.
+case "$0" in */*) dir=${0%/*} ;; *) dir=. ;; esac
+here=$(CDPATH= cd -- "$dir" && pwd) || exit 0
+if [ "$1" = "--home" ] && [ -n "$2" ]; then
+  WORKOUT_HOME=$2
+  export WORKOUT_HOME
+  shift 2
+fi
+py=$(command -v python3 2>/dev/null)
+if [ -z "$py" ]; then
+  echo "Workout Buddy: python3 was not found on PATH; install Python 3.9+ to use it." >&2
+  exit 0
+fi
+exec "$py" "$here/workout.py" "$@"

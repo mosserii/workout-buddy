@@ -1,0 +1,8 @@
+{
+  "name": "workout-buddy",
+  "version": "1.0.0",
+  "description": "Claude thinks. You rep. A short exercise set in a band above the prompt while Claude works on long turns: press 1 when done, 2 to skip.",
+  "author": { "name": "Zohar Mosseri" },
+  "license": "MIT",
+  "keywords": ["fitness", "exercise", "break", "health", "mod"]
+}

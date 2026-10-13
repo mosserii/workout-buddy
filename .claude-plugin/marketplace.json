@@ -1,0 +1,12 @@
+{
+  "name": "workout-buddy",
+  "description": "Workout Buddy for Claude Code: Claude thinks. You rep.",
+  "owner": { "name": "Zohar Mosseri" },
+  "plugins": [
+    {
+      "name": "workout-buddy",
+      "source": "./plugins/workout-buddy",
+      "description": "A short exercise set in a band above the prompt while Claude works on long turns: press 1 when done, 2 to skip."
+    }
+  ]
+}
