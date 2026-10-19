@@ -1,0 +1,1266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Workout Buddy: Claude thinks. You rep.</title>
+<meta name="description" content="Claude thinks. You rep. A Claude Code plugin that gives you one quick exercise set while Claude works.">
+<link rel="canonical" href="https://mosserii.github.io/workout-buddy/">
+<meta name="theme-color" content="#0f2e48">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-1 -4 16 16' shape-rendering='crispEdges'%3E%3Crect x='2' y='1' width='1' height='1' fill='%23f6f1e7'/%3E%3Crect x='3' y='1' width='1' height='1' fill='%239e3b22'/%3E%3Crect x='4' y='1' width='1' height='1' fill='%23f6f1e7'/%3E%3Crect x='5' y='1' width='1' height='1' fill='%239e3b22'/%3E%3Crect x='6' y='1' width='1' height='1' fill='%23f6f1e7'/%3E%3Crect x='7' y='1' width='1' height='1' fill='%23f6f1e7'/%3E%3Crect x='8' y='1' width='1' height='1' fill='%239e3b22'/%3E%3Crect x='9' y='1' width='1' height='1' fill='%23f6f1e7'/%3E%3Crect x='10' y='1' width='1' height='1' fill='%239e3b22'/%3E%3Crect x='11' y='1' width='1' height='1' fill='%23f6f1e7'/%3E%3Crect x='2' y='2' width='1' height='1' fill='%23d77757'/%3E%3Crect x='3' y='2' width='1' height='1' fill='%23d77757'/%3E%3Crect x='4' y='2' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='5' y='2' width='1' height='1' fill='%23d77757'/%3E%3Crect x='6' y='2' width='1' height='1' fill='%23d77757'/%3E%3Crect x='7' y='2' width='1' height='1' fill='%23d77757'/%3E%3Crect x='8' y='2' width='1' height='1' fill='%23d77757'/%3E%3Crect x='9' y='2' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='10' y='2' width='1' height='1' fill='%23d77757'/%3E%3Crect x='11' y='2' width='1' height='1' fill='%23d77757'/%3E%3Crect x='0' y='3' width='1' height='1' fill='%23f6f1e7'/%3E%3Crect x='1' y='3' width='1' height='1' fill='%23d77757'/%3E%3Crect x='2' y='3' width='1' height='1' fill='%23d77757'/%3E%3Crect x='3' y='3' width='1' height='1' fill='%23d77757'/%3E%3Crect x='4' y='3' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='5' y='3' width='1' height='1' fill='%23d77757'/%3E%3Crect x='6' y='3' width='1' height='1' fill='%23d77757'/%3E%3Crect x='7' y='3' width='1' height='1' fill='%23d77757'/%3E%3Crect x='8' y='3' width='1' height='1' fill='%23d77757'/%3E%3Crect x='9' y='3' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='10' y='3' width='1' height='1' fill='%23d77757'/%3E%3Crect x='11' y='3' width='1' height='1' fill='%23d77757'/%3E%3Crect x='12' y='3' width='1' height='1' fill='%23d77757'/%3E%3Crect x='13' y='3' width='1' height='1' fill='%23f6f1e7'/%3E%3Crect x='2' y='4' width='1' height='1' fill='%23d77757'/%3E%3Crect x='3' y='4' width='1' height='1' fill='%23d77757'/%3E%3Crect x='4' y='4' width='1' height='1' fill='%23d77757'/%3E%3Crect x='5' y='4' width='1' height='1' fill='%23d77757'/%3E%3Crect x='6' y='4' width='1' height='1' fill='%23d77757'/%3E%3Crect x='7' y='4' width='1' height='1' fill='%23d77757'/%3E%3Crect x='8' y='4' width='1' height='1' fill='%23d77757'/%3E%3Crect x='9' y='4' width='1' height='1' fill='%23d77757'/%3E%3Crect x='10' y='4' width='1' height='1' fill='%23d77757'/%3E%3Crect x='11' y='4' width='1' height='1' fill='%23d77757'/%3E%3Crect x='2' y='5' width='1' height='1' fill='%23d77757'/%3E%3Crect x='3' y='5' width='1' height='1' fill='%23d77757'/%3E%3Crect x='4' y='5' width='1' height='1' fill='%23d77757'/%3E%3Crect x='5' y='5' width='1' height='1' fill='%23d77757'/%3E%3Crect x='6' y='5' width='1' height='1' fill='%23d77757'/%3E%3Crect x='7' y='5' width='1' height='1' fill='%23d77757'/%3E%3Crect x='8' y='5' width='1' height='1' fill='%23d77757'/%3E%3Crect x='9' y='5' width='1' height='1' fill='%23d77757'/%3E%3Crect x='10' y='5' width='1' height='1' fill='%23d77757'/%3E%3Crect x='11' y='5' width='1' height='1' fill='%23d77757'/%3E%3Crect x='3' y='6' width='1' height='1' fill='%23d77757'/%3E%3Crect x='5' y='6' width='1' height='1' fill='%23d77757'/%3E%3Crect x='8' y='6' width='1' height='1' fill='%23d77757'/%3E%3Crect x='10' y='6' width='1' height='1' fill='%23d77757'/%3E%3Crect x='3' y='7' width='1' height='1' fill='%23d77757'/%3E%3Crect x='5' y='7' width='1' height='1' fill='%23d77757'/%3E%3Crect x='8' y='7' width='1' height='1' fill='%23d77757'/%3E%3Crect x='10' y='7' width='1' height='1' fill='%23d77757'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Workout Buddy">
+<meta property="og:title" content="Workout Buddy: Claude thinks. You rep.">
+<meta property="og:description" content="Claude thinks. You rep. A Claude Code plugin that gives you one quick exercise set while Claude works.">
+<meta property="og:url" content="https://mosserii.github.io/workout-buddy/">
+<meta property="og:image" content="https://mosserii.github.io/workout-buddy/og.jpg">
+<meta property="og:image:secure_url" content="https://mosserii.github.io/workout-buddy/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Workout Buddy: a pixel-art Clawd in a sweatband doing a victory jump in a navy, engraved gym, beside the headline &quot;Claude thinks. You rep.&quot;">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Workout Buddy: Claude thinks. You rep.">
+<meta name="twitter:description" content="Claude thinks. You rep. A Claude Code plugin that gives you one quick exercise set while Claude works.">
+<meta name="twitter:image" content="https://mosserii.github.io/workout-buddy/og.jpg">
+<meta name="twitter:image:alt" content="Workout Buddy: a pixel-art Clawd in a sweatband doing a victory jump in a navy, engraved gym, beside the headline &quot;Claude thinks. You rep.&quot;">
+
+<!-- the base styles the artifact host wraps the page in, so it renders the same here -->
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui}img{max-width:100%}[hidden]{display:none!important}</style>
+<style>
+/* Layout: an engraved navy hero card (copy left, a hilltop of working-out Clawds right), then quiet paper sections set in the same serif/sans pair. */
+:root {
+  --bg: #e9edf1;
+  --surface: #f6f8fa;
+  --ink: #0f2338;
+  --ink-2: #4b5d6f;
+  --line: #cfd8e1;
+  --accent: #b9583a;
+  --clawd: #d77757;
+  --pill: #0f2338;
+  --pill-ink: #f3f1ec;
+
+  /* the hero, the terminal mocks and the exercise tiles are one dark, engraved world in both themes */
+  --navy: #0f2e48;
+  --navy-deep: #0a2135;
+  --hero-ink: #f3f1ec;
+  --hero-ink-2: #b6c2cd;
+  --hero-line: rgba(214, 226, 236, 0.16);
+  --sand: #d6c29a;
+  --term-bg: #0b1826;
+  --term-ink: #dfe6ec;
+  --term-dim: #7f93a6;
+  --term-line: #23394e;
+  --term-green: #6cc884;
+  --term-cyan: #7cc6d6;
+
+  --display: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --sans: "Geist", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --etch: none;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #071320; --surface: #0c1d2e; --ink: #e6ebef; --ink-2: #94a4b4; --line: #1c3146;
+    --accent: #e8906f; --pill: #f3f1ec; --pill-ink: #0f2338; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #071320; --surface: #0c1d2e; --ink: #e6ebef; --ink-2: #94a4b4; --line: #1c3146;
+  --accent: #e8906f; --pill: #f3f1ec; --pill-ink: #0f2338; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 400 17px/1.6 var(--sans); -webkit-font-smoothing: antialiased;
+  padding-inline: 16px; padding-block: 16px 0; overflow-x: hidden;
+}
+@media (min-width: 900px) { body { padding-inline: 24px; padding-block: 24px 0; } }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--clawd); outline-offset: 3px; border-radius: 8px; }
+h1, h2, h3 { text-wrap: balance; margin: 0; }
+p { margin: 0; }
+code, kbd, pre { font-family: var(--mono); }
+.etched { background-image: var(--etch); }
+
+/* ---------------------------------------------------------------- hero */
+.hero {
+  position: relative; isolation: isolate; overflow: hidden;
+  border-radius: 28px; color: var(--hero-ink);
+  background-color: var(--navy);
+  background-image: radial-gradient(120% 90% at 75% 15%, #17405f 0%, var(--navy) 45%, var(--navy-deep) 100%);
+  min-height: clamp(660px, 52vw, 800px);
+  display: grid; grid-template-rows: auto 1fr auto;
+  box-shadow: 0 30px 80px -40px rgba(10, 33, 53, 0.55);
+}
+.hero::after { /* engraved grain over everything, including the copy */
+  content: ""; position: absolute; inset: 0; z-index: 3; pointer-events: none;
+  background-image: var(--etch); opacity: 0.55; mix-blend-mode: soft-light;
+}
+.scene { position: absolute; inset: 0; z-index: 0; }
+.scene canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+
+.nav {
+  position: relative; z-index: 2;
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
+  padding: 22px clamp(20px, 3.6vw, 48px) 0;
+  font-size: 14.5px;
+}
+.nav .links { display: flex; gap: 26px; }
+.nav .links a { text-decoration: none; color: var(--hero-ink-2); transition: color 0.2s; }
+.nav .links a:hover { color: var(--hero-ink); }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; justify-self: center; }
+.brand canvas { width: 28px; height: 16px; image-rendering: pixelated; }
+.brand span { font: 500 21px/1 var(--display); letter-spacing: -0.01em; }
+.nav .cta-mini { justify-self: end; }
+
+.pill {
+  display: inline-flex; align-items: center; gap: 10px; white-space: nowrap;
+  border-radius: 999px; text-decoration: none; font: 500 15px/1 var(--sans);
+  padding: 13px 20px; transition: transform 0.2s ease, background 0.2s ease;
+}
+.pill:hover { transform: translateY(-1px); }
+.pill.solid { background: var(--hero-ink); color: var(--navy-deep); }
+.pill.ghost { background: rgba(214, 226, 236, 0.1); color: var(--hero-ink); border: 1px solid rgba(214, 226, 236, 0.14); }
+.pill.ghost .play {
+  width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center;
+  background: rgba(214, 226, 236, 0.18);
+}
+.pill.ghost .play::before { content: ""; border-left: 7px solid var(--hero-ink); border-top: 4.5px solid transparent; border-bottom: 4.5px solid transparent; margin-left: 2px; }
+.pill .soon { font: 500 11.5px/1 var(--mono); letter-spacing: 0.02em; padding: 4px 7px; border-radius: 999px; background: rgba(15, 46, 72, 0.12); color: var(--navy); }
+.nav .pill { padding: 10px 16px; font-size: 14px; }
+
+.hero-grid {
+  position: relative; z-index: 2;
+  display: grid; grid-template-columns: minmax(0, 45fr) minmax(0, 55fr);
+  padding-inline: clamp(20px, 3.6vw, 48px);
+}
+.hero-copy { align-self: center; display: grid; gap: 0; justify-items: start; padding-block: 40px 32px; max-width: 560px; }
+.eyebrow {
+  font: 500 13px/1 var(--sans); color: var(--hero-ink-2);
+  padding: 8px 12px; border-radius: 999px; background: rgba(214, 226, 236, 0.1);
+  border: 1px solid rgba(214, 226, 236, 0.08); margin-bottom: 26px;
+}
+.hero h1 {
+  font: 400 clamp(44px, 6.3vw, 96px)/0.98 var(--display);
+  font-variation-settings: "opsz" 72; letter-spacing: -0.025em;
+  margin-bottom: 26px;
+}
+.hero h1 .l2 { background: linear-gradient(100deg, #f3f1ec 20%, #a9b6c2 95%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero .sub { color: var(--hero-ink-2); font-size: clamp(16.5px, 1.25vw, 19px); line-height: 1.6; max-width: 46ch; margin-bottom: 32px; }
+.hero .ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.stage { min-height: 320px; }
+
+.hero-foot {
+  position: relative; z-index: 2;
+  margin-inline: clamp(20px, 3.6vw, 48px); padding-block: 26px 30px;
+  border-top: 1px solid var(--hero-line);
+  display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap;
+}
+.facts { display: flex; gap: 0; flex-wrap: wrap; }
+.fact { padding-inline: 0 30px; margin-right: 30px; border-right: 1px solid var(--hero-line); display: grid; gap: 4px; }
+.fact:last-child { border-right: 0; margin-right: 0; padding-right: 0; }
+.fact b { font: 500 clamp(28px, 2.6vw, 38px)/1 var(--sans); letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.fact span { font-size: 13.5px; color: var(--hero-ink-2); }
+.runs { text-align: right; display: grid; gap: 6px; font-size: 13.5px; color: var(--hero-ink-2); }
+.runs strong { font: 500 15px/1.2 var(--mono); color: var(--hero-ink); }
+
+.chip {
+  position: absolute; z-index: 1; left: 0; top: 0;
+  font: 500 14px/1 var(--mono); color: var(--term-ink);
+  display: flex; align-items: center; gap: 12px; white-space: nowrap;
+  padding: 11px 14px; border-radius: 14px;
+  background: rgba(8, 22, 36, 0.72); border: 1px solid rgba(214, 226, 236, 0.16);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 14px 30px -14px rgba(0, 0, 0, 0.6);
+  opacity: 0; transition: opacity 0.4s ease;
+}
+.chip.on { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .chip { transition: none; } }
+.chip .q { color: #fff; }
+.chip .k { color: var(--term-dim); display: inline-flex; gap: 6px; align-items: center; }
+.chip .k kbd {
+  font: 600 12px/1 var(--mono); color: var(--term-ink); padding: 4px 6px; border-radius: 6px;
+  border: 1px solid rgba(214, 226, 236, 0.28); background: rgba(214, 226, 236, 0.06);
+  transition: background 0.15s, color 0.15s;
+}
+.chip .k.hit kbd { background: var(--term-green); color: #08202a; border-color: var(--term-green); }
+.chip .ok { color: var(--term-green); }
+
+/* load-in: the copy sharpens out of a soft blur, from a mostly-sharp resting state, so a
+   link-preview screenshot taken right after load still reads the headline */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-copy > *, .hero-foot { animation: sharpen 0.5s cubic-bezier(.2,.7,.2,1) both; }
+  .hero-copy > :nth-child(2) { animation-delay: 0.04s; }
+  .hero-copy > :nth-child(3) { animation-delay: 0.08s; }
+  .hero-copy > :nth-child(4) { animation-delay: 0.12s; }
+  .hero-foot { animation-delay: 0.16s; }
+  @keyframes sharpen { from { filter: blur(2.5px); opacity: 0.6; transform: translateY(4px); } }
+}
+
+/* copy and gym stay side by side down to 700 px, so the top of the card (what a link preview
+   crops) always holds the headline and Clawd; only phones stack */
+@media (max-width: 829px) { /* the nav links need ~830 px beside the centred brand */
+  .nav { grid-template-columns: 1fr auto; padding-top: 18px; }
+  .nav .links { display: none; }
+  .brand { justify-self: start; }
+}
+@media (max-width: 860px) {
+  .hero-foot { padding-block: 22px 24px; }
+  .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 0; width: 100%; }
+  .fact { margin-right: 0; padding-inline: 0 14px; border-right: 0; }
+  .runs { text-align: left; }
+}
+@media (max-width: 699px) {
+  .hero { min-height: 0; }
+  .hero-grid { grid-template-columns: minmax(0, 1fr); }
+  .hero-copy { padding-block: 44px 0; }
+  .hero h1 { font-size: 52px; }
+  .stage { min-height: 360px; }
+}
+@media (max-width: 420px) {
+  .hero h1 { font-size: 50px; }
+  .hero .ctas .pill { flex: 1 1 auto; justify-content: center; }
+  .chip { font-size: 12.5px; gap: 9px; padding: 9px 11px; }
+}
+
+/* ---------------------------------------------------------------- sections */
+main { max-width: 1180px; margin-inline: auto; }
+section { padding-block: clamp(72px, 9vw, 120px) 0; scroll-margin-top: 24px; }
+.kicker { font: 500 13px/1 var(--mono); color: var(--accent); letter-spacing: 0.02em; margin-bottom: 18px; display: block; }
+h2 { font: 400 clamp(36px, 4.4vw, 58px)/1.04 var(--display); letter-spacing: -0.02em; font-variation-settings: "opsz" 60; }
+h2 em { font-style: italic; color: var(--accent); }
+.lede { color: var(--ink-2); max-width: 60ch; margin-top: 18px; font-size: 18px; }
+.split { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(32px, 5vw, 72px); align-items: start; }
+@media (max-width: 860px) { .split { grid-template-columns: minmax(0, 1fr); } }
+
+/* how it works */
+.steps { list-style: none; padding: 0; margin: 36px 0 0; display: grid; gap: 26px; counter-reset: s; }
+.steps li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 14px; counter-increment: s; }
+.steps li::before {
+  content: counter(s); font: 500 13px/1 var(--mono); color: var(--ink);
+  width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center;
+}
+.steps h3 { font: 600 17px/1.35 var(--sans); margin-bottom: 4px; }
+.steps p { color: var(--ink-2); font-size: 16px; }
+.steps code { white-space: nowrap; font-size: 14px; background: var(--surface); border: 1px solid var(--line); padding: 1px 6px; border-radius: 6px; }
+
+.term {
+  background: var(--term-bg); color: var(--term-ink); border-radius: 18px; overflow: hidden;
+  border: 1px solid var(--term-line); font: 400 14px/1.55 var(--mono);
+  box-shadow: 0 30px 70px -40px rgba(10, 33, 53, 0.7);
+}
+.term-bar { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-bottom: 1px solid var(--term-line); color: var(--term-dim); font-size: 12.5px; }
+.term-bar i { width: 11px; height: 11px; border-radius: 50%; background: #2a4057; display: block; }
+.term-bar span { margin-left: 8px; }
+.term-body { padding: 18px 18px 16px; display: grid; gap: 6px; min-width: 0; }
+.term .dim { color: var(--term-dim); }
+.term .you { color: var(--term-ink); }
+.term .you::before { content: "> "; color: var(--term-dim); }
+.term .tool::before { content: "⏺ "; color: var(--term-green); }
+.term .spin { color: var(--clawd); }
+.term .spin .dim { color: var(--term-dim); }
+.band {
+  margin-top: 10px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 16px; align-items: center;
+  min-height: 74px;
+}
+.band canvas { width: 112px; height: 64px; image-rendering: pixelated; display: block; }
+.band .txt { display: grid; gap: 4px; min-width: 0; }
+.band .q { color: #fff; font-weight: 500; }
+.band .btns { display: flex; gap: 10px; flex-wrap: wrap; }
+.band button {
+  font: 500 13.5px/1 var(--mono); color: var(--term-ink); background: rgba(214, 226, 236, 0.06);
+  border: 1px solid #36506a; border-radius: 7px; padding: 6px 10px; cursor: pointer;
+}
+.band button:hover { border-color: var(--term-cyan); }
+.band button b { color: var(--term-cyan); font-weight: 600; }
+.band .hint { color: var(--term-dim); font-size: 12.5px; }
+.band .ok { color: var(--term-green); }
+.prompt-box { margin-top: 8px; border: 1px solid #36506a; border-radius: 10px; padding: 9px 12px; color: var(--term-dim); }
+.prompt-box .caret { display: inline-block; width: 8px; height: 16px; background: var(--term-ink); vertical-align: -3px; margin-left: 2px; }
+@media (prefers-reduced-motion: no-preference) { .prompt-box .caret { animation: blink 1.1s steps(1) infinite; } @keyframes blink { 50% { opacity: 0; } } }
+#how .split > div:last-child { position: sticky; top: 24px; }
+@media (max-width: 860px) { #how .split > div:last-child { position: static; } }
+.term-note { color: var(--ink-2); font-size: 14px; margin-top: 14px; }
+.term-note kbd { font-size: 12.5px; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 5px; padding: 0 5px; background: var(--surface); }
+@media (max-width: 420px) { .term { font-size: 12.5px; } .band { grid-template-columns: minmax(0, 1fr); gap: 10px; } .band canvas { width: 84px; height: 48px; } .term-body { padding: 14px; } }
+
+/* when it asks */
+.rules { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin-top: 44px; border-top: 1px solid var(--line); }
+.rule { padding: 26px 26px 0 0; display: grid; gap: 8px; align-content: start; }
+.rule + .rule { padding-left: 26px; border-left: 1px solid var(--line); }
+.rule b { font: 400 clamp(40px, 4.4vw, 56px)/1 var(--display); letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.rule h3 { font: 600 16px/1.3 var(--sans); }
+.rule p { color: var(--ink-2); font-size: 15.5px; }
+.quiet { margin-top: 34px; color: var(--ink-2); max-width: 70ch; }
+.quiet strong { color: var(--ink); font-weight: 600; }
+@media (max-width: 760px) {
+  .rules { grid-template-columns: minmax(0, 1fr); }
+  .rule, .rule + .rule { padding: 22px 0; border-left: 0; border-bottom: 1px solid var(--line); }
+}
+
+/* exercises */
+.tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 44px; }
+.tile {
+  border-radius: 18px; color: var(--hero-ink); padding: 18px 18px 16px; position: relative; overflow: hidden;
+  background-color: var(--navy);
+  display: grid; gap: 14px;
+}
+.tile::before { content: ""; position: absolute; inset: 0; background-image: var(--etch); opacity: 0.5; mix-blend-mode: soft-light; pointer-events: none; }
+.tile .art { height: 92px; display: grid; place-items: center; border-bottom: 1px solid var(--hero-line); padding-bottom: 12px; }
+.tile canvas { width: 140px; height: 80px; image-rendering: pixelated; }
+.tile h3 { font: 400 25px/1.1 var(--display); letter-spacing: -0.01em; }
+.tile .meta { display: flex; justify-content: space-between; gap: 10px; font: 400 12.5px/1.3 var(--mono); color: var(--hero-ink-2); }
+.tile .meta .t { color: var(--sand); font-variant-numeric: tabular-nums; }
+.tiles-note { color: var(--ink-2); font-size: 14.5px; margin-top: 16px; }
+.tiles-note code { font-size: 13px; }
+@media (max-width: 1000px) { .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 420px) { .tiles { gap: 10px; } .tile { padding: 14px 12px 12px; } .tile canvas { width: 112px; height: 64px; } .tile .art { height: 76px; } .tile h3 { font-size: 21px; } .tile .meta { flex-direction: column; gap: 2px; } }
+
+/* progress */
+.ladder { margin-top: 30px; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; align-items: end; height: 220px; }
+.rung { display: grid; grid-template-rows: auto 1fr auto; height: 100%; gap: 8px; text-align: center; }
+.rung .bar-wrap { display: flex; align-items: end; }
+.rung .bar { width: 100%; border-radius: 8px 8px 2px 2px; background: var(--ink); opacity: 0.16; }
+.rung:last-child .bar { background: var(--clawd); opacity: 1; }
+.rung .reps { font: 500 13.5px/1 var(--mono); font-variant-numeric: tabular-nums; }
+.rung .lv { font: 400 12px/1.3 var(--mono); color: var(--ink-2); }
+.ladder-cap { color: var(--ink-2); font-size: 14.5px; margin-top: 14px; }
+.ach { list-style: none; padding: 0; margin: 30px 0 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 28px; }
+.ach li { display: flex; justify-content: space-between; gap: 14px; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 15px; min-width: 0; }
+.ach li b { font-weight: 600; }
+.ach li span { color: var(--ink-2); text-align: right; }
+@media (max-width: 560px) { .ach { grid-template-columns: minmax(0, 1fr); } }
+
+.share-row { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(28px, 4vw, 56px); margin-top: 64px; align-items: center; }
+@media (max-width: 860px) { .share-row { grid-template-columns: minmax(0, 1fr); } }
+.card-wrap { overflow-x: auto; }
+.brag {
+  font: 400 13.5px/1.5 var(--mono); color: var(--term-ink); background: var(--term-bg);
+  border: 3px double #4d6880; border-radius: 6px; padding: 4px 0; min-width: 0;
+}
+.brag > div { padding: 3px 16px; display: flex; justify-content: space-between; gap: 12px; white-space: nowrap; }
+.brag hr { border: 0; border-top: 1px solid var(--term-line); margin: 4px 0; }
+.brag .r3 { display: grid; grid-template-columns: 13ch 18ch minmax(0, 1fr); gap: 0 12px; }
+.brag .r3 span:last-child { text-align: right; }
+.brag .h { font-weight: 600; letter-spacing: 0.06em; }
+.brag .bar { color: var(--clawd); letter-spacing: -0.5px; }
+.brag .bar s { color: #2f465c; text-decoration: none; }
+.brag .dim { color: var(--term-dim); }
+.example { font: 500 12px/1 var(--mono); color: var(--ink-2); margin-bottom: 10px; display: block; }
+.cmds { list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 12px; }
+.cmds li { display: grid; gap: 2px; }
+.cmds code { font-size: 14.5px; color: var(--ink); }
+.cmds span { color: var(--ink-2); font-size: 15px; }
+
+/* private */
+.private { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 72px); align-items: start; }
+@media (max-width: 860px) { .private { grid-template-columns: minmax(0, 1fr); } }
+.facts-list { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--line); }
+.facts-list li { display: grid; grid-template-columns: minmax(0, 11rem) minmax(0, 1fr); gap: 16px; padding: 15px 0; border-bottom: 1px solid var(--line); font-size: 15.5px; }
+.facts-list li b { font-weight: 600; }
+.facts-list li span { color: var(--ink-2); }
+.facts-list code { font-size: 13.5px; }
+@media (max-width: 480px) { .facts-list li { grid-template-columns: minmax(0, 1fr); gap: 2px; } }
+
+/* install */
+.install {
+  border-radius: 28px; padding: clamp(28px, 5vw, 64px); position: relative; overflow: hidden; isolation: isolate;
+  background-color: var(--navy); color: var(--hero-ink);
+  background-image: radial-gradient(90% 120% at 100% 0%, #17405f 0%, var(--navy) 50%, var(--navy-deep) 100%);
+  display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(28px, 4vw, 56px); align-items: center;
+}
+.install::after { content: ""; position: absolute; inset: 0; z-index: -1; background-image: var(--etch); opacity: 0.55; mix-blend-mode: soft-light; }
+.install h2 { color: var(--hero-ink); }
+.install .lede { color: var(--hero-ink-2); }
+.badge-soon { display: inline-block; font: 500 12.5px/1 var(--mono); color: var(--navy-deep); background: var(--sand); padding: 7px 10px; border-radius: 999px; margin-bottom: 20px; }
+.cmd-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; counter-reset: c; }
+.cmd-list li { counter-increment: c; display: grid; gap: 8px; }
+.cmd-list .lbl { font-size: 13.5px; color: var(--hero-ink-2); }
+.cmd-list .lbl::before { content: counter(c) ". "; font-family: var(--mono); }
+.cmd {
+  display: flex; align-items: center; gap: 10px; min-width: 0;
+  background: rgba(4, 14, 24, 0.55); border: 1px solid var(--hero-line); border-radius: 12px; padding: 8px 8px 8px 16px;
+}
+.cmd code { flex: 1 1 auto; min-width: 0; overflow-x: auto; white-space: nowrap; font-size: 14.5px; padding-block: 6px; color: var(--hero-ink); }
+.cmd code var { font-style: normal; color: var(--sand); }
+@media (max-width: 520px) { .cmd code { white-space: normal; overflow-wrap: anywhere; } }
+.copy {
+  flex: none; font: 500 13px/1 var(--sans); color: var(--navy-deep); background: var(--hero-ink);
+  border: 0; border-radius: 8px; padding: 9px 12px; cursor: pointer; min-width: 68px;
+}
+.copy:hover { background: #fff; }
+.install .fine { font-size: 14px; color: var(--hero-ink-2); margin-top: 14px; }
+@media (max-width: 860px) { .install { grid-template-columns: minmax(0, 1fr); } }
+
+/* faq */
+.faq { margin-top: 30px; border-top: 1px solid var(--line); }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { cursor: pointer; list-style: none; padding: 20px 36px 20px 0; position: relative; font: 400 22px/1.3 var(--display); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 4px; top: 18px; font: 300 26px/1 var(--sans); color: var(--ink-2); }
+.faq details[open] summary::after { content: "−"; }
+.faq details p { color: var(--ink-2); padding-bottom: 22px; max-width: 68ch; }
+.faq code { font-size: 14px; }
+
+footer {
+  max-width: 1180px; margin: clamp(72px, 9vw, 120px) auto 0; padding-block: 28px 40px;
+  border-top: 1px solid var(--line); color: var(--ink-2); font-size: 14px;
+  display: flex; justify-content: space-between; gap: 12px 24px; flex-wrap: wrap;
+}
+footer .name { font: 500 18px/1 var(--display); color: var(--ink); }
+
+@media (prefers-reduced-motion: reduce) { .pill, .pill:hover { transition: none; transform: none; } }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+</head>
+<body>
+<header class="hero" id="top">
+  <div class="scene" aria-hidden="true">
+    <canvas class="bg"></canvas>
+    <canvas class="fg"></canvas>
+    <div class="chip on" id="chip"><span class="q">20 squats?</span><span class="k"><kbd>1</kbd>done</span><span class="k"><kbd>2</kbd>skip</span></div>
+    <div class="chip" id="chip2"></div>
+  </div>
+
+  <nav class="nav" aria-label="Main">
+    <div class="links">
+      <a href="#how">How it works</a>
+      <a href="#exercises">Exercises</a>
+      <a href="#install">Install</a>
+    </div>
+    <a class="brand" href="#top" aria-label="Workout Buddy, top of page">
+      <canvas id="brandArt" width="14" height="8" aria-hidden="true"></canvas>
+      <span>Workout Buddy</span>
+    </a>
+    <a class="pill solid cta-mini" href="#install">Install</a>
+  </nav>
+
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">For Claude Code</span>
+      <h1>Claude thinks.<br><span class="l2">You rep.</span></h1>
+      <p class="sub">When Claude Code settles into a long prompt, Clawd shows up right above your prompt with one quick set. Press 1 when you've done it, 2 to skip. No banners, no browser tab, nothing to click.</p>
+      <div class="ctas">
+        <a class="pill solid" href="#install">Install</a>
+        <a class="pill ghost" href="#how">How it works <span class="play" aria-hidden="true"></span></a>
+      </div>
+    </div>
+    <div class="stage" id="stage" aria-hidden="true"></div>
+  </div>
+
+  <div class="hero-foot">
+    <div class="facts">
+      <div class="fact"><b>8</b><span>animated exercises</span></div>
+      <div class="fact"><b>1 key</b><span>logs the set</span></div>
+      <div class="fact"><b>~5 min</b><span>of waiting per set</span></div>
+      <div class="fact"><b>0</b><span>network calls</span></div>
+    </div>
+    <div class="runs">
+      <span>Runs inside</span>
+      <strong>Claude Code 2.1.287+</strong>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="how">
+    <div class="split">
+      <div>
+        <span class="kicker">How it works</span>
+        <h2>One set, right <em>above</em> the prompt.</h2>
+        <ol class="steps">
+          <li><div><h3>You wait on Claude.</h3><p>Every second you spend waiting fills a meter, in every session at once. Quick answers never get a set.</p></div></li>
+          <li><div><h3>After about 5 minutes of waiting, a band appears.</h3><p>The next time Claude is busy for about 20 seconds, Clawd, the orange pixel mascot, does the exercise next to the ask: <code>20 squats?  1: done  2: skip</code></p></div></li>
+          <li><div><h3>Press 1 when you're done.</h3><p>Type <code>1</code> into the empty prompt. Clawd does a victory jump with sparkles and the band reads <code>✅ 20 squats · bravo! 🔥</code></p></div></li>
+          <li><div><h3>Or press 2 to skip.</h3><p>Nothing is logged, and the next ask is a different exercise.</p></div></li>
+        </ol>
+      </div>
+      <div>
+        <div class="term" id="demo" tabindex="0" aria-label="Interactive mock of the Workout Buddy band in a Claude Code terminal">
+          <div class="term-bar"><i></i><i></i><i></i><span>~/billing · claude</span></div>
+          <div class="term-body">
+            <div class="you" id="demoPrompt">refactor the invoice module and add tests</div>
+            <div class="tool dim">Read 14 files, edited invoice.py</div>
+            <div class="spin">✻ <span id="demoVerb">Working</span>… <span class="dim">(<span id="demoSecs">42</span>s · esc to interrupt)</span></div>
+            <div class="band" id="band">
+              <canvas id="bandArt" width="14" height="8" role="img" aria-label="Clawd doing squats"></canvas>
+              <div class="txt" aria-live="polite">
+                <div class="q" id="bandQ">20 squats?</div>
+                <div class="btns" id="bandBtns">
+                  <button type="button" id="btnDone"><b>1</b>: done</button>
+                  <button type="button" id="btnSkip"><b>2</b>: skip</button>
+                </div>
+                <div class="hint" id="bandHint">press 1 when done</div>
+              </div>
+            </div>
+            <div class="prompt-box">&gt; <span class="caret"></span></div>
+          </div>
+        </div>
+        <p class="term-note">A mock of the terminal. Press <kbd>1</kbd> or <kbd>2</kbd> while it's on screen, or use the buttons.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="when">
+    <span class="kicker">When it asks</span>
+    <h2>It stays out of your way.</h2>
+    <div class="rules">
+      <div class="rule"><b>~5 min</b><h3>A waiting meter</h3><p>Every second you wait on Claude counts, across all your sessions. After about 5 minutes of waiting in total, give or take a minute, a set is due.</p></div>
+      <div class="rule"><b>~20 s</b><h3>Only while Claude is busy</h3><p>A due set waits for a turn where Claude has been working for about 20 seconds. Short prompts never trigger one.</p></div>
+      <div class="rule"><b>1</b><h3>One set per turn</h3><p>However long the turn runs, you get one ask. Done or skipped, that's it until the next one.</p></div>
+    </div>
+    <p class="quiet"><strong>Nothing pops over your work.</strong> The ask lives in the band above the prompt: no notification banners, no browser tab, no mouse. The whole answer is one key.</p>
+  </section>
+
+  <section id="exercises">
+    <span class="kicker">Exercises</span>
+    <h2>Eight moves, each with its own Clawd.</h2>
+    <p class="lede">Every exercise has a real animation. Plank and wall sit are held, with a countdown in the band and a drop of sweat when it gets hard.</p>
+    <div class="tiles" id="tiles"></div>
+    <p class="tiles-note">Default ranges. Change the list and the ranges in <code>~/.claude/workout/config.json</code>.</p>
+  </section>
+
+  <section id="progress">
+    <div class="split">
+      <div>
+        <span class="kicker">Streaks and levels</span>
+        <h2>Show up daily and the sets <em>grow</em>.</h2>
+        <p class="lede">Every 3 days of streak adds 0.1× to your reps, up to 1.5×. Here is what a 20-squat ask becomes.</p>
+        <div class="ladder" id="ladder" role="img" aria-label="Reps for a 20-squat ask by streak: 20 at level 1, 22, 24, 26, 28, and 30 at level 6 from a 15-day streak"></div>
+        <p class="ladder-cap">Streak days 0, 3, 6, 9, 12 and 15+. Miss a day and the streak, and the multiplier, start over.</p>
+      </div>
+      <div>
+        <span class="kicker">Achievements</span>
+        <ul class="ach">
+          <li><b>First Blood</b><span>first set logged</span></li>
+          <li><b>Spark</b><span>3-day streak</span></li>
+          <li><b>Rep Machine I</b><span>100 reps</span></li>
+          <li><b>Week Warrior</b><span>7-day streak</span></li>
+          <li><b>Rep Machine II</b><span>500 reps</span></li>
+          <li><b>Unbreakable</b><span>30-day streak</span></li>
+          <li><b>Rep Machine III</b><span>1,000 reps</span></li>
+                    <li><b>Rep Machine IV</b><span>5,000 reps</span></li>
+          <li><b>Variety Pack</b><span>every exercise in 7 days</span></li>
+          <li><b>Night Owl</b><span>a set 22:00 to 04:00</span></li>
+          <li><b>Early Bird</b><span>a set 05:00 to 08:00</span></li>
+          <li><b>Plank Master</b><span>5+ min of holds a day</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="share-row">
+      <div class="card-wrap">
+        <span class="example">Example output of /workout share (sample week)</span>
+        <div class="brag" role="img" aria-label="Example weekly brag card: 812 reps, 3 minutes 30 seconds held, 41 sets, 9-day streak, level 4">
+          <div class="h">WORKOUT BUDDY × CLAUDE CODE</div>
+          <div class="dim">📅 Oct 7 – Oct 13, 2026</div>
+          <hr>
+          <div>💪 812 reps · 3m 30s held · 41 sets</div>
+          <div>🔥 9-day streak · Level 4 · ×1.3</div>
+          <hr>
+          <div class="r3"><span>squats</span><span class="bar">██████████████████</span><span>10× · 254</span></div>
+          <div class="r3"><span>push-ups</span><span class="bar">████████████<s>░░░░░░</s></span><span>7× · 112</span></div>
+          <div class="r3"><span>jumping jacks</span><span class="bar">██████████<s>░░░░░░░░</s></span><span>6× · 214</span></div>
+          <div class="r3"><span>plank</span><span class="bar">█████<s>░░░░░░░░░░░░░</s></span><span>3× · 2m 30s</span></div>
+          <hr>
+          <div class="dim">Best day: Thu Oct 9 · 9 sets</div>
+          <div class="dim">🏆 Latest: Week Warrior</div>
+          <hr>
+          <div>while Claude coded, I trained 💪</div>
+        </div>
+      </div>
+      <div>
+        <h3 style="font: 400 30px/1.15 var(--display); letter-spacing: -0.01em;">Your week, in the terminal.</h3>
+        <ul class="cmds">
+          <li><code>/workout stats</code><span>Today, the last 7 days, streak, level and totals.</span></li>
+          <li><code>/workout achievements</code><span>Unlocked and locked, with progress toward each.</span></li>
+          <li><code>/workout share</code><span>A screenshot-ready weekly card. Add <code>--text</code> for a short post.</span></li>
+          <li><code>/workout pause</code><span>Hold the asks for an hour, or for the rest of the day.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="private">
+    <div class="private">
+      <div>
+        <span class="kicker">Private by design</span>
+        <h2>It all stays on your machine.</h2>
+        <p class="lede">Workout Buddy is a small Python script and a Claude Code mod. It never talks to the network and there is no account to make.</p>
+      </div>
+      <ul class="facts-list">
+        <li><b>Built from</b><span>Python standard library and a Claude Code mod. Nothing else to install.</span></li>
+        <li><b>Network</b><span>None. No telemetry, no sign-in, no server.</span></li>
+        <li><b>Your log</b><span>Plain files in <code>~/.claude/workout/</code>. Delete the folder and it's gone.</span></li>
+        <li><b>Needs</b><span>Claude Code 2.1.287 or later, for the band above the prompt.</span></li>
+        <li><b>In the Desktop app</b><span>The band shows the ask and the buttons, without the pixel art.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="install">
+    <div class="install">
+      <div>
+        <h2>Two commands.</h2>
+        <p class="lede">This is the whole install, typed into Claude Code.</p>
+      </div>
+      <div>
+        <ol class="cmd-list">
+          <li><span class="lbl">Add the marketplace</span>
+            <div class="cmd"><code id="cmd1">/plugin marketplace add mosserii/workout-buddy</code><button class="copy" type="button" data-for="cmd1">Copy</button></div></li>
+          <li><span class="lbl">Install the plugin</span>
+            <div class="cmd"><code id="cmd2">/plugin install workout-buddy@workout-buddy</code><button class="copy" type="button" data-for="cmd2">Copy</button></div></li>
+        </ol>
+        <p class="fine">Needs Claude Code 2.1.287 or newer and python3. Everything stays on your machine.</p>
+        <p class="fine"><a href="https://github.com/mosserii/workout-buddy">View on GitHub</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <span class="kicker">Questions</span>
+    <h2>Before you start.</h2>
+    <div class="faq">
+      <details><summary>Will it interrupt me mid-thought?</summary><p>No. It only asks once Claude has been busy for about 20 seconds, when you're waiting anyway. Every second you wait, in any session, fills one shared meter. After about 5 minutes of waiting in total, give or take a minute, the next busy turn brings a set. Short prompts never trigger one, and a turn never gets more than one.</p></details>
+      <details><summary>What if Claude asks me “1 or 2?”</summary><p>While the band is showing, a lone <code>1</code> or <code>2</code> in an empty prompt presses its button. To answer Claude, type more than the bare digit, or wait for the band to go.</p></details>
+      <details><summary>Can I pick my own exercises?</summary><p>Yes. The list and each rep range live in <code>~/.claude/workout/config.json</code>. The eight built-in moves each have their own animation; anything else gets a cheerful generic bounce.</p></details>
+      <details><summary>How do I take a day off?</summary><p><code>/workout pause day</code> holds the asks until midnight, and <code>/workout resume</code> brings them back. A pause doesn't log anything.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span class="name">Workout Buddy</span>
+  <span>Not affiliated with Anthropic. Claude and Claude Code are trademarks of Anthropic.</span>
+</footer>
+
+<script>
+(() => {
+'use strict';
+const D = {"tick":140,"w":14,"h":8,"pal":{"O":"#d77757","E":"#ffffff","*":"#ffd166","~":"#7ec8e3","W":"#6b6b6b","+":"#fff4d6","S":"#f6f1e7","T":"#9e3b22"},"frames":["..............|..OOOOOOOOOO..|..OOEOOOOEOO..|OOOOEOOOOEOOOO|..OOOOOOOOOO..|..OOOOOOOOOO..|...O.O..O.O...|...O.O..O.O...","..............|..OOOOOOOOOO..|..OOOOOOOOOO..|OOOOEOOOOEOOOO|..OOOOOOOOOO..|..OOOOOOOOOO..|...O.O..O.O...|...O.O..O.O...","..............|..OOOOOOOOOO..|..OEOOOOEOOO..|OOOEOOOOEOOOOO|..OOOOOOOOOO..|..OOOOOOOOOO..|...O.O..O.O...|...O.O..O.O...","..............|..OOOOOOOOOO..|..OOOEOOOOEO..|OOOOOEOOOOEOOO|..OOOOOOOOOO..|..OOOOOOOOOO..|...O.O..O.O...|...O.O..O.O...","..............|..............|..OOOOOOOOOO..|..OOEOOOOEOO..|OOOOEOOOOEOOOO|..OOOOOOOOOO..|..OOOOOOOOOO..|...O.O..O.O...","..............|..............|..............|..OOOOOOOOOO..|..OEOOOOOOEO..|OOOOEOOOOEOOOO|..OOOOOOOOOO..|..O.O....O.O..","..OOOOOOOOOO..|..OOEOOOOEOO..|OOOEOEOOEOEOOO|..OOOOOOOOOO..|..OOOOOOOOOO..|...O.O..O.O...|...O.O..O.O...|...O.O..O.O...","..............|..............|.........OOOO.|.....OOOOOOEO.|.OOOOOOOOOOOO.|.OOOOOOOO.O...|.OOOO.....O...|O.........O...","..............|..............|..............|.......OOOOOO.|.OOOOOOOOOOEO.|.OOOOOOOOOOOO.|.OOOOOO...O...|O.........O...","..............|..............|..............|..............|.OOOOOOOOOOOO.|.OOOOOOOOOOOO.|.OOOOOOOOOOEO.|O........OO...","..............|..............|.........OOEO.|.....OOOOOOOO.|.OOOOOOOOOOOO.|.OOOOOOOO.O...|.OOOO.....O...|O.........O...","..............|..OOOOOOOOOO..|..OOEOOOOEOO..|.OOOEOOOOEOOO.|O.OOOOOOOOOO.O|..OOOOOOOOOO..|...O.O..O.O...|...O.O..O.O...","O.OOOOOOOOOO.O|.OOOEOOOOEOOO.|..OOEOOOOEOO..|..OOOOOOOOOO..|..OOOOOOOOOO..|...O.O..O.O...|..O.O....O.O..|..............","O............O|O.OOOOOOOOOO.O|.OOOEOOOOEOOO.|..OEOEOOEOEO..|..OOOOOOOOOO..|..OOOOOOOOOO..|..O.O....O.O..|.O.O......O.O.","..............|..............|..............|..............|...........O..|.OEOOOOOO.O.O.|OOOOOOOOOO...O|.OOOOOOOO....O","..............|..............|..............|..OOOO........|.OOOOEOO...O..|..OOOOOOO.O.O.|....OOOOOO...O|.....OOOO....O","..............|..OOO.........|..OOOE........|..OOOOOOOO....|...OOOOO...O..|....OOOOO.O.O.|.....OOOOO...O|......OOOO...O","..............|..OOOE........|..OOOO........|..OOOOOOOO....|...OOOOO...O..|....OOOOO.O.O.|.....OOOOO...O|......OOOO...O","..............|..............|..............|..............|...........O..|.OOOOOOOO.O.O.|OOEOOOOOOO...O|.OOOOOOOO....O","..............|..............|.OOOOOOOOOO...|.OEOOOOEOOO...|OOEOOOOEOOOOO.|.OOOOOOOOOO...|.O.O...O.O....|O.O...O.O.....","..............|..............|.OOOOOOOOOO...|.OEOOOOOOEO...|OOOEOOOOEOOOO.|.OOOOOOOOOO...|.O.O...O.O....|O.O...O.O.....","..............|..............|...OOOOOOOOOO.|...OOOEOOOOEO.|.OOOOOEOOOOEOO|...OOOOOOOOOO.|....O.O...O.O.|.....O.O...O.O","..............|..............|...OOOOOOOOOO.|...OEOOOOOOEO.|.OOOOEOOOOEOOO|...OOOOOOOOOO.|....O.O...O.O.|.....O.O...O.O","..OOOOOOOOOO..|..OOEOOOOEOO..|OOOOEOOOOEOOOO|..OOOOOOOOOO..|..OOOOOOOOOO..|...O.O..O.O...|...O.O..O.O...|...O.O..O.O...","..............|..............|..............|..............|.OOOOOOOOOOOO.|.OOOOOOOOOOEO.|.OOOOOOOOOOOO.|O........OOO..","..............|..............|..............|....OOOOOO....|.OOOOOOOOOOOO.|.OOOOOOOOOOEO.|.OOO......OOO.|O........OOO..","..............|..............|............~.|..............|.OOOOOOOOOOOO.|.OOOOOOOOOOEO.|.OOOOOOOOOOOO.|O........OOO..","..............|..............|..............|.............~|.OOOOOOOOOOOO.|.OOOOOOOOOOOO.|.OOOOOOOOOOEO.|O........OOO..","..............|..............|..............|..............|.OOOOOOOOOOOO.|.OOOOOOOOOOOO~|.OOOOOOOOOOEO.|O........OOO..","..............|..............|..............|..............|.OOOOOOOOOOOO.|.OOOOOOOOOOOO.|.OOOOOOOOOOEO.|O........OOO..","W.............|WOOOOOO.......|WOOOOEO.......|WOOOOEOOO.....|WOOOOOO.......|WOOOOOOOOOOO..|W........O.O..|W........O.O..","W......~......|WOOOOOO.......|WOOOOEO.......|WOOOOEOOO.....|WOOOOOO.......|WOOOOOOOOOOO..|W........O.O..|W........O.O..","W.............|WOOOOOO.~.....|WOOOOOO.......|WOOOOEOOO.....|WOOOOOO.......|WOOOOOOOOOOO..|W........O.O..|W........O.O..","W.............|WOOOOOO.......|WOOOOOO.......|WOOOOEOO~.....|WOOOOOO.......|WOOOOOOOOOOO..|W........O.O..|W........O.O..","W.............|WOOOOOO.......|WOOOOOO.......|WOOOOEOOO.....|WOOOOOO.......|WOOOOOOOOOOO..|W........O.O..|W........O.O..","W.............|W.............|WOOOOOO.......|WOOOOOO.......|WOOOOEOOO.....|WOOOOOO.......|WOOOOOOOOOOO..|W........O.O..","O.OOOOOOOOOO.O|.OOOEOOOOEOOO.|..OEOEOOEOEO..|*.OOOOOOOOOO.+|..OOOOOOOOOO..|...O.O..O.O...|............*.|.+............","O.OOOOOOOOOO.O|*OOOEOOOOEOOO.|..OEOEOOEOEO..|..OOOOOOOOOO..|..OOOOOOOOOO.*|+..O.O..O.O...|..............|.............+","O............O|*.OOOOOOOOOO.O|.OOOEOOOOEOOO.|..OEOEOOEOEO..|..OOOOOOOOOO.*|+.OOOOOOOOOO..|...O.O..O.O...|...O.O..O.O..+","O............O|O.OOOOOOOOOO.O|.OOOEOOOOEOOO.|*.OEOEOOEOEO.+|..OOOOOOOOOO..|..OOOOOOOOOO..|...O.O..O.O.*.|.+.O.O..O.O...","*.............|..OOOOOOOOOO.+|..OOEOOOOEOO..|OOOEOEOOEOEOOO|..OOOOOOOOOO..|..OOOOOOOOOO..|...O.O..O.O...|...O.O..O.O...","..............|..STSTSSTSTS..|..OOEOOOOEOO..|SOOOEOOOOEOOOS|..OOOOOOOOOO..|..OOOOOOOOOO..|...O.O..O.O...|...O.O..O.O...","..............|..STSTSSTSTS..|..OOOOOOOOOO..|SOOOEOOOOEOOOS|..OOOOOOOOOO..|..OOOOOOOOOO..|...O.O..O.O...|...O.O..O.O...","..............|..STSTSSTSTS..|..OEOOOOEOOO..|SOOEOOOOEOOOOS|..OOOOOOOOOO..|..OOOOOOOOOO..|...O.O..O.O...|...O.O..O.O...","..............|..STSTSSTSTS..|..OOOEOOOOEO..|SOOOOEOOOOEOOS|..OOOOOOOOOO..|..OOOOOOOOOO..|...O.O..O.O...|...O.O..O.O...","..............|..............|..STSTSSTSTS..|..OOEOOOOEOO..|SOOOEOOOOEOOOS|..OOOOOOOOOO..|..OOOOOOOOOO..|...O.O..O.O...","..............|..............|..............|..STSTSSTSTS..|..OEOOOOOOEO..|SOOOEOOOOEOOOS|..OOOOOOOOOO..|..O.O....O.O..","..STSTSSTSTS..|..OOEOOOOEOO..|SOOEOEOOEOEOOS|..OOOOOOOOOO..|..OOOOOOOOOO..|...O.O..O.O...|...O.O..O.O...|...O.O..O.O...","..............|..............|.........STTS.|.....OOOOOOEO.|.OOOOOOOOOOOO.|.OOOOOOOO.O...|.OOOO.....S...|O.........O...","..............|..............|..............|.......OOSTTS.|.OOOOOOOOOOEO.|.OOOOOOOOOOOO.|.OOOOOO...S...|O.........O...","..............|..............|..............|..............|.OOOOOOOOSTTS.|.OOOOOOOOOOOO.|.OOOOOOOOOOEO.|O........OS...","..............|..............|.........STES.|.....OOOOOOOO.|.OOOOOOOOOOOO.|.OOOOOOOO.O...|.OOOO.....S...|O.........O...","..............|..STSTSSTSTS..|..OOEOOOOEOO..|.OOOEOOOOEOOO.|S.OOOOOOOOOO.S|..OOOOOOOOOO..|...O.O..O.O...|...O.O..O.O...","S.STSTSSTSTS.S|.OOOEOOOOEOOO.|..OOEOOOOEOO..|..OOOOOOOOOO..|..OOOOOOOOOO..|...O.O..O.O...|..O.O....O.O..|..............","O............O|S.STSTSSTSTS.S|.OOOEOOOOEOOO.|..OEOEOOEOEO..|..OOOOOOOOOO..|..OOOOOOOOOO..|..O.O....O.O..|.O.O......O.O.","..............|..............|..............|..............|...........O..|.SEOOOOOO.O.O.|OTOOOOOOOO...O|.SOOOOOOO....O","..............|..............|..............|..STTS........|.OOOOEOO...O..|..OOOOOOO.O.O.|....OOOOOO...O|.....OOOO....O","..............|..STS.........|..OOOE........|..OOOOOOSO....|...OOOOO...O..|....OOOOO.O.O.|.....OOOOO...O|......OOOO...O","..............|..STSE........|..OOOO........|..OOOOOOSO....|...OOOOO...O..|....OOOOO.O.O.|.....OOOOO...O|......OOOO...O","..............|..............|..............|..............|...........O..|.SOOOOOOO.O.O.|OTEOOOOOOO...O|.SOOOOOOO....O","..............|..............|.STSTSSTSTS...|.OEOOOOEOOO...|SOEOOOOEOOOOS.|.OOOOOOOOOO...|.O.O...O.O....|O.O...O.O.....","..............|..............|.STSTSSTSTS...|.OEOOOOOOEO...|SOOEOOOOEOOOS.|.OOOOOOOOOO...|.O.O...O.O....|O.O...O.O.....","..............|..............|...STSTSSTSTS.|...OOOEOOOOEO.|.SOOOOEOOOOEOS|...OOOOOOOOOO.|....O.O...O.O.|.....O.O...O.O","..............|..............|...STSTSSTSTS.|...OEOOOOOOEO.|.SOOOEOOOOEOOS|...OOOOOOOOOO.|....O.O...O.O.|.....O.O...O.O","..STSTSSTSTS..|..OOEOOOOEOO..|SOOOEOOOOEOOOS|..OOOOOOOOOO..|..OOOOOOOOOO..|...O.O..O.O...|...O.O..O.O...|...O.O..O.O...","..............|..............|..............|..............|.OOOOOOOOSTTS.|.OOOOOOOOOOEO.|.OOOOOOOOOOOO.|O........OSO..","..............|..............|..............|....OOOOOO....|.OOOOOOOOSTTS.|.OOOOOOOOOOEO.|.OOO......OOO.|O........OSO..","..............|..............|............~.|..............|.OOOOOOOOSTTS.|.OOOOOOOOOOEO.|.OOOOOOOOOOOO.|O........OSO..","..............|..............|..............|.............~|.OOOOOOOOSTTS.|.OOOOOOOOOOOO.|.OOOOOOOOOOEO.|O........OSO..","..............|..............|..............|..............|.OOOOOOOOSTTS.|.OOOOOOOOOOOO~|.OOOOOOOOOOEO.|O........OSO..","..............|..............|..............|..............|.OOOOOOOOSTTS.|.OOOOOOOOOOOO.|.OOOOOOOOOOEO.|O........OSO..","W.............|WSTSSTS.......|WOOOOEO.......|WOOOOEOOS.....|WOOOOOO.......|WOOOOOOOOOOO..|W........O.O..|W........O.O..","W......~......|WSTSSTS.......|WOOOOEO.......|WOOOOEOOS.....|WOOOOOO.......|WOOOOOOOOOOO..|W........O.O..|W........O.O..","W.............|WSTSSTS.~.....|WOOOOOO.......|WOOOOEOOS.....|WOOOOOO.......|WOOOOOOOOOOO..|W........O.O..|W........O.O..","W.............|WSTSSTS.......|WOOOOOO.......|WOOOOEOO~.....|WOOOOOO.......|WOOOOOOOOOOO..|W........O.O..|W........O.O..","W.............|WSTSSTS.......|WOOOOOO.......|WOOOOEOOS.....|WOOOOOO.......|WOOOOOOOOOOO..|W........O.O..|W........O.O..","W.............|W.............|WSTSSTS.......|WOOOOOO.......|WOOOOEOOS.....|WOOOOOO.......|WOOOOOOOOOOO..|W........O.O..","S.STSTSSTSTS.S|.OOOEOOOOEOOO.|..OEOEOOEOEO..|*.OOOOOOOOOO.+|..OOOOOOOOOO..|...O.O..O.O...|............*.|.+............","S.STSTSSTSTS.S|*OOOEOOOOEOOO.|..OEOEOOEOEO..|..OOOOOOOOOO..|..OOOOOOOOOO.*|+..O.O..O.O...|..............|.............+","O............O|*.STSTSSTSTS.S|.OOOEOOOOEOOO.|..OEOEOOEOEO..|..OOOOOOOOOO.*|+.OOOOOOOOOO..|...O.O..O.O...|...O.O..O.O..+","O............O|S.STSTSSTSTS.S|.OOOEOOOOEOOO.|*.OEOEOOEOEO.+|..OOOOOOOOOO..|..OOOOOOOOOO..|...O.O..O.O.*.|.+.O.O..O.O...","*.............|..STSTSSTSTS.+|..OOEOOOOEOO..|SOOEOEOOEOEOOS|..OOOOOOOOOO..|..OOOOOOOOOO..|...O.O..O.O...|...O.O..O.O..."],"anims":{"idle":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,2,2,2,2,2,3,3,3,3,3,0,0,0,0,0,0,0,0,1,0,0,1],"squats":[0,0,4,5,5,5,4,6,6,0,0,1],"pushups":[7,7,8,9,9,9,8,7,10,10],"jacks":[11,11,12,13,13,12],"crunches":[14,14,15,16,17,17,15,14,18],"lunges":[0,0,19,20,20,20,0,0,21,22,22,22],"calves":[0,0,0,23,6,6,6,23,0,0,1],"plank":[24,24,24,24,24,24,25,24,25,24,24,24,26,26,27,28,29,24,24,24],"wallsit":[30,30,30,30,30,30,31,31,32,33,34,35,35,34,30,30,30],"victory":[36,36,37,38,38,39],"badge":[40]},"hero":{"idle":[[41,2520],[42,140],[41,840],[43,700],[44,700],[41,1120],[42,140],[41,280],[42,140]],"squats":[[41,280],[45,140],[46,420],[45,140],[47,280],[41,280],[42,140]],"pushups":[[48,280],[49,140],[50,420],[49,140],[48,140],[51,280]],"jacks":[[52,280],[53,140],[54,280],[53,140]],"crunches":[[55,280],[56,140],[57,140],[58,280],[56,140],[55,140],[59,140]],"lunges":[[41,280],[60,140],[61,420],[41,280],[62,140],[63,420]],"calves":[[41,420],[64,140],[47,420],[64,140],[41,280],[42,140]],"plank":[[65,840],[66,140],[65,140],[66,140],[65,420],[67,280],[68,140],[69,140],[70,140],[65,420]],"wallsit":[[71,840],[72,280],[73,140],[74,140],[75,140],[76,280],[75,140],[71,420]],"victory":[[77,280],[78,140],[79,280],[80,140]],"badge":[[81,140]]}};
+const FR = D.frames.map((f) => f.split('|'));
+const RM = window.matchMedia('(prefers-reduced-motion: reduce)');
+let still = RM.matches;
+const DPR = Math.min(2, window.devicePixelRatio || 1);
+const NAVY = '#0f2e48';
+
+/* ---------------- seeded random, so the engraving is the same on every load */
+function rng(seed) { return () => { seed |= 0; seed = (seed + 0x6d2b79f5) | 0; let t = Math.imul(seed ^ (seed >>> 15), 1 | seed); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+
+/* ---------------- engraving texture, shared by the hero, tiles and install card */
+function etchTile(size) {
+  const c = document.createElement('canvas'); c.width = c.height = size;
+  const g = c.getContext('2d'); const r = rng(7);
+  g.lineCap = 'round';
+  for (let i = 0; i < size * size / 26; i++) {
+    const x = r() * size, y = r() * size, len = 2 + r() * 7, a = -0.85 + (r() - 0.5) * 0.35;
+    g.strokeStyle = r() < 0.55 ? `rgba(255,255,255,${0.10 + r() * 0.22})` : `rgba(0,0,0,${0.18 + r() * 0.3})`;
+    g.lineWidth = 0.5 + r() * 0.5;
+    g.beginPath(); g.moveTo(x, y); g.lineTo(x + Math.cos(a) * len, y + Math.sin(a) * len); g.stroke();
+    // wrap the tile seamlessly
+    if (x > size - 9 || y > size - 9) { g.beginPath(); g.moveTo(x - size, y - size); g.lineTo(x - size + Math.cos(a) * len, y - size + Math.sin(a) * len); g.stroke(); }
+  }
+  return c;
+}
+const ETCH = etchTile(180);
+try { document.documentElement.style.setProperty('--etch', `url(${ETCH.toDataURL('image/png')})`); } catch (e) { /* plain navy is fine */ }
+
+/* ---------------- drawing Clawd */
+function drawFlat(g, frame, s, ox, oy) {
+  for (let y = 0; y < frame.length; y++) for (let x = 0; x < frame[y].length; x++) {
+    const ch = frame[y][x]; if (ch === '.') continue;
+    g.fillStyle = D.pal[ch] || D.pal.O; g.fillRect(ox + x * s, oy + y * s, s, s);
+  }
+}
+function shade(hex, k) {
+  const n = parseInt(hex.slice(1), 16);
+  const f = (v) => Math.max(0, Math.min(255, Math.round(k > 0 ? v + (255 - v) * k : v * (1 + k))));
+  return `rgb(${f(n >> 16)},${f((n >> 8) & 255)},${f(n & 255)})`;
+}
+const SH = {};
+for (const [k, v] of Object.entries(D.pal)) SH[k] = { base: v, top: shade(v, 0.22), side: shade(v, -0.28), low: shade(v, -0.42) };
+function drawVoxel(g, frame, s, ox, oy) {
+  const at = (x, y) => (y >= 0 && y < frame.length && x >= 0 && x < frame[y].length ? frame[y][x] : '.');
+  const t = Math.max(1, s * 0.16);
+  for (let y = 0; y < frame.length; y++) for (let x = 0; x < frame[y].length; x++) {
+    const ch = frame[y][x]; if (ch === '.') continue;
+    const c = SH[ch] || SH.O, px = ox + x * s, py = oy + y * s;
+    g.fillStyle = c.base; g.fillRect(px, py, s + 0.5, s + 0.5);
+    if (ch === '*' || ch === '+' || ch === '~') continue;
+    if (at(x, y - 1) === '.') { g.fillStyle = c.top; g.fillRect(px, py, s + 0.5, t); }
+    if (at(x + 1, y) === '.') { g.fillStyle = c.side; g.fillRect(px + s - t, py, t + 0.5, s + 0.5); }
+    if (at(x, y + 1) === '.') { g.fillStyle = c.low; g.fillRect(px, py + s - t * 0.8, s + 0.5, t * 0.8); }
+  }
+}
+const seqOf = (name) => D.anims[name] || D.anims.idle;
+const frameOf = (name, i) => { const q = seqOf(name); return FR[q[((i % q.length) + q.length) % q.length]]; };
+// the pose that best stands for an exercise in a still picture
+const POSE = { squats: 4, pushups: 4, jacks: 3, crunches: 3, lunges: 4, calves: 5, plank: 0, wallsit: 0, victory: 0, idle: 0, badge: 0 };
+
+/* ---------------- one clock for every Clawd on the page */
+const subs = [];
+let tick = 0, timer = null;
+function onTick(fn) { subs.push(fn); fn(tick, true); }
+function run() { tick++; for (const fn of subs) fn(tick, false); }
+function setMotion() {
+  if (timer) { clearInterval(timer); timer = null; }
+  if (!still) timer = setInterval(run, D.tick);
+  for (const fn of subs) fn(tick, true);
+}
+RM.addEventListener && RM.addEventListener('change', (e) => { still = e.matches; setMotion(); });
+
+/* ---------------- brand mark */
+(() => { const c = document.getElementById('brandArt'); drawFlat(c.getContext('2d'), FR[D.hero.idle[0][0]], 1, 0, 0); })();
+
+/* ---------------- hero scene */
+const hero = document.querySelector('.hero');
+const bg = hero.querySelector('canvas.bg'), fg = hero.querySelector('canvas.fg');
+const stage = document.getElementById('stage');
+const chips = [document.getElementById('chip'), document.getElementById('chip2')];
+let G = null;
+const FEET_MAX = 500;
+
+function layout() {
+  const hb = hero.getBoundingClientRect(), sb = stage.getBoundingClientRect();
+  const W = Math.round(hb.width), H = Math.round(hb.height);
+  if (!W || !H) return;
+  const sx = sb.left - hb.left, sy = sb.top - hb.top, sw = sb.width, sh = sb.height;
+  const narrow = sw > W * 0.8;                                   // stacked: the stage spans the card
+  const cx = narrow ? sx + sw * 0.5 : sx + sw * 0.52;           // Clawd's centre line
+  // where his feet stand; side by side they stay within ~500 px of the card's top, so a link
+  // preview (a screenshot of the page's top ~560 px) always has him in it
+  const fy = narrow ? sy + sh * 0.86 : Math.min(H * 0.8, sy + sh * 0.92, FEET_MAX);
+  const s = Math.round(Math.max(10, Math.min(32, narrow ? sw / 27 : sw / 26)));
+  const hz = narrow ? fy - s * 4.2 : fy - Math.max(s * 4.5, Math.min((H - fy) * 1.1, s * 7)); // wall meets floor
+  G = { W, H, sx, sy, sw, sh, narrow, cx, fy, hz, s };
+  G.main = { s, x: Math.round(cx - 7 * s), y: Math.round(fy - 8 * s + s * 0.35) };
+  for (const c of [bg, fg]) { c.width = W * DPR; c.height = H * DPR; }
+  paintBackground();
+  fg.getContext('2d').clearRect(0, 0, fg.width, fg.height);
+  chips.forEach(placeChip);
+  lastKey = ''; drawHero(true);
+}
+
+/* ---- engraving helpers: every prop is a filled shape, hatched where it turns from the light,
+   with halftone dots where the light catches it */
+const clamp01 = (v) => Math.max(0, Math.min(1, v));
+function engrave(g, path, o) {
+  const { x0, y0, x1, y1 } = o, sp = o.sp || 2.4, ang = o.ang == null ? -0.65 : o.ang;
+  g.save();
+  path(g); g.fillStyle = o.fill; g.fill(); g.clip();
+  const mx = (x0 + x1) / 2, my = (y0 + y1) / 2, R = Math.hypot(x1 - x0, y1 - y0) / 2 + 4;
+  const dx = Math.cos(ang), dy = Math.sin(ang), nx = -dy, ny = dx, seg = 5;
+  g.lineCap = 'round';
+  for (let k = -R; k <= R; k += sp) {
+    for (let t = -R; t < R; t += seg) {
+      const px = mx + nx * k + dx * t, py = my + ny * k + dy * t;
+      if (px < x0 - 2 || px > x1 + 2 || py < y0 - 2 || py > y1 + 2) continue;
+      const shd = o.shade(px, py);
+      if (shd < 0.18) continue;
+      g.strokeStyle = `rgba(2,8,14,${(0.12 + 0.5 * shd).toFixed(3)})`;
+      g.lineWidth = 0.45 + 0.6 * shd;
+      g.beginPath(); g.moveTo(px, py); g.lineTo(px + dx * seg * 0.85, py + dy * seg * 0.85); g.stroke();
+    }
+  }
+  const hs = sp * 1.25;
+  for (let y = y0, row = 0; y < y1; y += hs, row++) for (let x = x0 + (row % 2) * hs / 2; x < x1; x += hs) {
+    const shd = o.shade(x, y); if (shd > 0.38) continue;
+    g.globalAlpha = Math.min(1, (0.38 - shd) * 2.4);
+    g.fillStyle = o.hi || 'rgb(214,194,154)';
+    g.beginPath(); g.arc(x, y, 0.45 + (0.38 - shd) * 2.2, 0, Math.PI * 2); g.fill();
+  }
+  g.globalAlpha = 1; g.restore();
+  if (o.rim) { path(g); g.strokeStyle = o.rim; g.lineWidth = o.rimW || 1; g.stroke(); }
+}
+// light comes from the window behind Clawd: a prop's side facing him is lit, its far side and underside are dark
+function shadeFor(x0, y0, x1, y1, round) {
+  const w = x1 - x0 || 1, h = y1 - y0 || 1, right = (x0 + x1) / 2 > G.cx;
+  return (x, y) => {
+    const u = (x - x0) / w, v = (y - y0) / h, away = right ? u : 1 - u;
+    let s = 0.1 + 0.55 * v + 0.45 * away;
+    if (round) { const ru = u - 0.5, rv = v - 0.5; s += 0.5 * (ru * ru + rv * rv) - 0.12; }
+    return clamp01(s);
+  };
+}
+function rrect(g, x, y, w, h, r) { g.beginPath(); g.roundRect ? g.roundRect(x, y, w, h, r) : g.rect(x, y, w, h); }
+function floorShadow(g, x, y, rx, a) {
+  const sh = g.createRadialGradient(x, y, 1, x, y, rx);
+  sh.addColorStop(0, `rgba(0,4,8,${a})`); sh.addColorStop(1, 'rgba(0,4,8,0)');
+  g.save(); g.translate(x, y); g.scale(1, 0.2); g.translate(-x, -y);
+  g.fillStyle = sh; g.beginPath(); g.arc(x, y, rx, 0, Math.PI * 2); g.fill(); g.restore();
+}
+
+/* ---- props */
+const IRON = '#26313c', IRON2 = '#33404c', BRONZE = '#5b4b37', STEEL = '#8d99a5', SAND = 'rgb(214,194,154)';
+function kettlebell(g, x, base, k, fill) {
+  // x: centre, base: floor line, k: body radius
+  const by = base - k * 0.95;
+  floorShadow(g, x + k * 0.15, base, k * 1.5, 0.6);
+  const body = (c) => { c.beginPath(); c.ellipse(x, by, k, k * 0.95, 0, 0, Math.PI * 2); };
+  engrave(g, body, { x0: x - k, y0: by - k, x1: x + k, y1: base, fill, shade: shadeFor(x - k, by - k, x + k, base, true), rim: 'rgba(214,194,154,0.35)' });
+  // handle: a thick arch
+  g.save();
+  g.lineCap = 'round';
+  g.strokeStyle = fill; g.lineWidth = k * 0.32;
+  g.beginPath(); g.ellipse(x, by - k * 0.75, k * 0.62, k * 0.7, 0, Math.PI, 0); g.stroke();
+  g.strokeStyle = 'rgba(214,194,154,0.45)'; g.lineWidth = 1;
+  g.beginPath(); g.ellipse(x, by - k * 0.75, k * 0.62 + k * 0.16, k * 0.7 + k * 0.16, 0, Math.PI * 1.05, Math.PI * 1.6); g.stroke();
+  g.strokeStyle = 'rgba(2,8,14,0.5)'; g.lineWidth = k * 0.1;
+  g.beginPath(); g.ellipse(x, by - k * 0.75, k * 0.62 - k * 0.1, k * 0.7 - k * 0.1, 0, Math.PI * 1.55, Math.PI * 2); g.stroke();
+  g.restore();
+}
+function barbell(g, cx, base, L, s) {
+  // lying on the floor, seen from the front: bar across, plates edge-on at each end
+  const big = s * 3.1, small = s * 2.2, bt = s * 0.62, st = s * 0.46, barY = base - big / 2;
+  floorShadow(g, cx, base, L * 0.62, 0.55);
+  // the bar
+  g.save();
+  const bar = g.createLinearGradient(0, barY - s * 0.14, 0, barY + s * 0.14);
+  bar.addColorStop(0, '#c3ccd4'); bar.addColorStop(0.5, STEEL); bar.addColorStop(1, '#3d4853');
+  g.fillStyle = bar; g.fillRect(cx - L / 2, barY - s * 0.14, L, s * 0.28);
+  g.fillStyle = 'rgba(2,8,14,0.35)';
+  for (let x = cx - L * 0.18; x < cx + L * 0.18; x += 3) g.fillRect(x, barY - s * 0.14, 1, s * 0.28); // knurling
+  g.restore();
+  for (const side of [-1, 1]) {
+    const e = cx + side * (L / 2 - s * 0.9);
+    const plates = [[e - side * bt * 1.5, big, bt, IRON], [e - side * bt * 0.4, big, bt, IRON2], [e + side * st * 0.8, small, st, BRONZE]];
+    for (const [px, ph, pt, fill] of plates) {
+      const x0 = px - pt / 2, y0 = base - ph;
+      engrave(g, (c) => rrect(c, x0, y0, pt, ph, pt * 0.35), { x0, y0, x1: x0 + pt, y1: base, fill, sp: 2.1, ang: -1.35, shade: shadeFor(x0, y0, x0 + pt, base), rim: 'rgba(214,194,154,0.3)' });
+    }
+    // collar
+    g.fillStyle = '#5d6873'; g.fillRect(e - side * bt * 2.4 - s * 0.18, barY - s * 0.32, s * 0.36, s * 0.64);
+  }
+}
+function dumbbellRack(g, x0, base, s, W) {
+  // a two-tier rack running off the right edge, dumbbells seen end-on (hex heads)
+  const rh = s * 6.2, legW = s * 0.42;
+  floorShadow(g, x0 + (W - x0) * 0.6, base, (W - x0) * 0.75, 0.55);
+  const tiers = [base - rh * 0.34, base - rh * 0.78];
+  // frame
+  g.save();
+  g.fillStyle = '#18222c';
+  g.beginPath(); g.moveTo(x0, base); g.lineTo(x0 + legW, base); g.lineTo(x0 + legW + s * 1.1, base - rh); g.lineTo(x0 + s * 1.1, base - rh); g.closePath(); g.fill();
+  g.strokeStyle = 'rgba(214,194,154,0.25)'; g.lineWidth = 1; g.stroke();
+  for (const ty of tiers) {
+    const off = s * 1.1 * (base - ty) / rh;
+    g.fillStyle = '#1c2732'; g.fillRect(x0 + off, ty, W - x0, s * 0.38);
+    g.fillStyle = 'rgba(214,194,154,0.22)'; g.fillRect(x0 + off, ty, W - x0, 1);
+  }
+  g.restore();
+  // hex heads on each tier, heavier toward the edge
+  tiers.forEach((ty, t) => {
+    const off = s * 1.1 * (base - ty) / rh;
+    let x = x0 + off + s * 1.25;
+    for (let i = 0; x < W + s * 2; i++) {
+      const r = s * (0.78 + i * 0.09 + (t === 0 ? 0.12 : 0));
+      const cy = ty - r * 0.92;
+      const hex = (c) => { c.beginPath(); for (let k = 0; k < 6; k++) { const a = Math.PI / 6 + k * Math.PI / 3; c.lineTo(x + r * Math.cos(a), cy + r * Math.sin(a)); } c.closePath(); };
+      engrave(g, hex, { x0: x - r, y0: cy - r, x1: x + r, y1: cy + r, fill: IRON, sp: 2.2, shade: shadeFor(x - r, cy - r, x + r, cy + r, true), rim: 'rgba(214,194,154,0.32)' });
+      g.strokeStyle = 'rgba(214,194,154,0.2)'; g.lineWidth = 1;
+      g.beginPath(); g.arc(x, cy, r * 0.42, 0, Math.PI * 2); g.stroke();
+      x += r * 2.15;
+    }
+  });
+}
+function jumpRope(g, x, base, s) {
+  floorShadow(g, x, base, s * 2.6, 0.4);
+  g.save(); g.lineCap = 'round';
+  const loops = [[0, 0, 2.2, 0.55], [s * 0.35, -s * 0.12, 1.9, 0.48], [-s * 0.3, -s * 0.05, 1.6, 0.42]];
+  for (const [ox, oy, rx, ry] of loops) {
+    g.strokeStyle = 'rgba(2,8,14,0.55)'; g.lineWidth = s * 0.2;
+    g.beginPath(); g.ellipse(x + ox, base - s * 0.3 + oy + 1.5, rx * s, ry * s, 0, 0, Math.PI * 2); g.stroke();
+    g.strokeStyle = '#a88f5e'; g.lineWidth = s * 0.13;
+    g.beginPath(); g.ellipse(x + ox, base - s * 0.3 + oy, rx * s, ry * s, 0, 0, Math.PI * 2); g.stroke();
+  }
+  // two handles
+  for (const [hx, ha] of [[x + s * 2.3, -0.5], [x - s * 2.4, 0.4]]) {
+    g.save(); g.translate(hx, base - s * 0.35); g.rotate(ha);
+    engrave(g, (c) => rrect(c, -s * 0.9, -s * 0.2, s * 1.8, s * 0.4, s * 0.2), { x0: -s * 0.9, y0: -s * 0.2, x1: s * 0.9, y1: s * 0.2, fill: '#5e4535', sp: 1.8, shade: (px, py) => clamp01(0.3 + (py + s * 0.2) / (s * 0.4) * 0.6) });
+    g.restore();
+  }
+  g.restore();
+}
+function wallClock(g, x, y, r) {
+  engrave(g, (c) => { c.beginPath(); c.arc(x, y, r, 0, Math.PI * 2); }, { x0: x - r, y0: y - r, x1: x + r, y1: y + r, fill: '#183652', sp: 2.2, shade: shadeFor(x - r, y - r, x + r, y + r, true), rim: 'rgba(214,194,154,0.45)', rimW: 1.4 });
+  g.save();
+  g.strokeStyle = 'rgba(214,194,154,0.55)'; g.lineCap = 'round';
+  for (let k = 0; k < 12; k++) {
+    const a = k * Math.PI / 6, r0 = r * (k % 3 ? 0.78 : 0.7);
+    g.lineWidth = k % 3 ? 1 : 1.6;
+    g.beginPath(); g.moveTo(x + Math.cos(a) * r0, y + Math.sin(a) * r0); g.lineTo(x + Math.cos(a) * r * 0.86, y + Math.sin(a) * r * 0.86); g.stroke();
+  }
+  g.strokeStyle = 'rgba(243,241,236,0.75)'; g.lineWidth = 2;
+  g.beginPath(); g.moveTo(x, y); g.lineTo(x + r * 0.32, y - r * 0.38); g.stroke();
+  g.lineWidth = 1.4;
+  g.beginPath(); g.moveTo(x, y); g.lineTo(x - r * 0.12, y - r * 0.66); g.stroke();
+  g.restore();
+}
+
+function paintBackground() {
+  const { W, H, hz, fy, s, cx } = G, g = bg.getContext('2d'), r = rng(42);
+  g.setTransform(DPR, 0, 0, DPR, 0, 0);
+  // ---- the back wall
+  const wall = g.createLinearGradient(0, 0, 0, hz);
+  wall.addColorStop(0, '#11344f'); wall.addColorStop(1, '#0d2a42');
+  g.fillStyle = wall; g.fillRect(0, 0, W, hz + 1);
+  // tall window behind Clawd, and its glow on the wall
+  const ww = G.narrow ? G.sw * 0.62 : G.sw * 0.5;
+  const wb = hz - (G.narrow ? s * 1.2 : s * 1.6), wx = cx - ww / 2;
+  // side by side, the window keeps a tall shape even when Clawd's floor sits high in a tall card
+  const wy = G.narrow ? G.sy + s * 1.6 : Math.max(G.sy, Math.min(H * 0.15, wb - ww * 0.62));
+  const glow = g.createRadialGradient(cx, (wy + wb) / 2, 10, cx, (wy + wb) / 2, Math.max(ww, wb - wy) * 1.05);
+  glow.addColorStop(0, 'rgba(70,128,170,0.55)'); glow.addColorStop(1, 'rgba(70,128,170,0)');
+  g.fillStyle = glow; g.fillRect(0, 0, W, hz);
+  // wall panels and a rail
+  g.strokeStyle = 'rgba(2,10,18,0.35)'; g.lineWidth = 1;
+  const panel = Math.max(90, W / 10);
+  for (let x = panel * 0.5; x < W; x += panel) { g.beginPath(); g.moveTo(x, 0); g.lineTo(x, hz); g.stroke(); }
+  const rail = hz - (hz - wy) * 0.24;
+  g.fillStyle = 'rgba(2,10,18,0.35)'; g.fillRect(0, rail, W, 3);
+  g.fillStyle = 'rgba(214,194,154,0.14)'; g.fillRect(0, rail, W, 1);
+  // the window: panes of halftone light, mullions, frame
+  g.save();
+  rrect(g, wx, wy, ww, wb - wy, Math.min(ww / 2, 26)); g.clip();
+  const pane = g.createLinearGradient(wx, wy, wx + ww, wb);
+  pane.addColorStop(0, '#1f5578'); pane.addColorStop(1, '#173f5c');
+  g.fillStyle = pane; g.fillRect(wx, wy, ww, wb - wy);
+  const step = 3.4;
+  for (let y = wy, row = 0; y < wb; y += step, row++) for (let x = wx + (row % 2) * step / 2; x < wx + ww; x += step) {
+    const u = (x - wx) / ww, v = (y - wy) / (wb - wy);
+    const k = clamp01(1 - v * 0.9 - Math.abs(u - 0.62) * 0.7);
+    if (k < 0.08) continue;
+    g.fillStyle = `rgba(206,226,238,${(0.12 + k * 0.4) * (0.7 + r() * 0.3)})`;
+    g.beginPath(); g.arc(x + (r() - 0.5), y + (r() - 0.5), 0.35 + k * 1.25, 0, Math.PI * 2); g.fill();
+  }
+  g.restore();
+  const cols = 3, rows = G.narrow ? 3 : 4;
+  g.fillStyle = '#0c2236';
+  for (let i = 1; i < cols; i++) g.fillRect(wx + ww * i / cols - 3, wy, 6, wb - wy);
+  for (let j = 1; j < rows; j++) g.fillRect(wx, wy + (wb - wy) * j / rows - 3, ww, 6);
+  rrect(g, wx, wy, ww, wb - wy, Math.min(ww / 2, 26));
+  g.strokeStyle = '#0c2236'; g.lineWidth = 9; g.stroke();
+  g.strokeStyle = 'rgba(214,194,154,0.3)'; g.lineWidth = 1; g.stroke();
+  // sill
+  g.fillStyle = '#0a1d2e'; g.fillRect(wx - 10, wb + 4, ww + 20, 7);
+  g.fillStyle = 'rgba(214,194,154,0.28)'; g.fillRect(wx - 10, wb + 4, ww + 20, 1);
+  // wall grain
+  g.lineCap = 'round';
+  for (let i = 0; i < W * hz / 70; i++) {
+    const x = r() * W, y = r() * hz, len = 2 + r() * 8, a = -0.9 + (r() - 0.5) * 0.3;
+    g.strokeStyle = r() < 0.6 ? `rgba(170,205,230,${0.03 + r() * 0.07})` : `rgba(2,12,22,${0.12 + r() * 0.2})`;
+    g.lineWidth = 0.6;
+    g.beginPath(); g.moveTo(x, y); g.lineTo(x + Math.cos(a) * len, y + Math.sin(a) * len); g.stroke();
+  }
+  if (!G.narrow) wallClock(g, W - G.sw * 0.13, wy + s * 2.2, s * 1.55);
+
+  // ---- the rubber floor
+  const fl = g.createLinearGradient(0, hz, 0, H);
+  fl.addColorStop(0, '#1d2a33'); fl.addColorStop(1, '#0b1117');
+  g.fillStyle = fl; g.fillRect(0, hz, W, H - hz);
+  g.save();
+  g.beginPath(); g.rect(0, hz, W, H - hz); g.clip();
+  // window light spilling onto the floor
+  const spill = g.createRadialGradient(cx, hz + (H - hz) * 0.25, 4, cx, hz + (H - hz) * 0.25, ww * 0.8);
+  spill.addColorStop(0, 'rgba(90,140,175,0.22)'); spill.addColorStop(1, 'rgba(90,140,175,0)');
+  g.fillStyle = spill; g.fillRect(0, hz, W, H - hz);
+  // tile seams in perspective
+  const vpY = hz - (H - hz) * 1.6, tile = G.sw * (G.narrow ? 0.26 : 0.16);
+  g.strokeStyle = 'rgba(0,3,6,0.55)'; g.lineWidth = 1.2;
+  for (let i = -14; i <= 14; i++) {
+    const bx = cx + (i + 0.5) * tile * 1.9;
+    g.beginPath(); g.moveTo(cx + (bx - cx) * (hz - vpY) / (H - vpY), hz); g.lineTo(bx, H); g.stroke();
+  }
+  for (let k = 1; k < 6; k++) {
+    const y = hz + (H - hz) * Math.pow(k / 6, 1.5);
+    g.beginPath(); g.moveTo(0, y); g.lineTo(W, y); g.stroke();
+  }
+  // rubber crumb: fine cross-hatching
+  for (let i = 0; i < W * (H - hz) / 22; i++) {
+    const x = r() * W, y = hz + r() * (H - hz), len = 1.5 + r() * 4, a = (r() < 0.5 ? -0.6 : 0.6) + (r() - 0.5) * 0.3;
+    g.strokeStyle = r() < 0.5 ? `rgba(150,175,190,${0.04 + r() * 0.08})` : `rgba(0,2,4,${0.18 + r() * 0.25})`;
+    g.lineWidth = 0.6;
+    g.beginPath(); g.moveTo(x, y); g.lineTo(x + Math.cos(a) * len, y + Math.sin(a) * len); g.stroke();
+  }
+  g.restore();
+  // baseboard
+  g.fillStyle = '#081624'; g.fillRect(0, hz - 5, W, 6);
+  g.fillStyle = 'rgba(214,194,154,0.2)'; g.fillRect(0, hz - 5, W, 1);
+
+  // ---- props, back to front
+  if (!G.narrow) {
+    barbell(g, cx - G.sw * 0.4, hz + (fy - hz) * 0.3, G.sw * 0.21, s * 0.62);
+    dumbbellRack(g, W - G.sw * 0.25, hz + (fy - hz) * 0.42, s * 0.78, W);
+  }
+  // Clawd's shadow
+  floorShadow(g, G.main.x + 7 * s, G.main.y + 8 * s - s * 0.1, 7.5 * s, 0.6);
+  if (G.narrow) {
+    kettlebell(g, cx + G.sw * 0.37, fy + s * 1.0, s * 1.5, BRONZE);
+    jumpRope(g, cx - G.sw * 0.34, fy + s * 1.2, s * 0.85);
+  } else {
+    kettlebell(g, cx + G.sw * 0.335, fy + s * 0.55, s * 1.15, IRON);
+    kettlebell(g, cx + G.sw * 0.335 + s * 2.5, fy + s * 0.75, s * 0.85, BRONZE);
+    jumpRope(g, cx - G.sw * 0.27, fy + s * 0.75, s * 0.6);
+  }
+
+  // ---- keep the copy readable
+  const scrim = g.createLinearGradient(0, 0, W * 0.55, 0);
+  scrim.addColorStop(0, 'rgba(10,33,53,0.62)'); scrim.addColorStop(1, 'rgba(10,33,53,0)');
+  g.fillStyle = scrim; g.fillRect(0, 0, G.narrow ? 0 : W * 0.55, H);
+  if (G.narrow) {
+    const top = g.createLinearGradient(0, 0, 0, G.sy + 40);
+    top.addColorStop(0, 'rgba(10,33,53,0.55)'); top.addColorStop(1, 'rgba(10,33,53,0)');
+    g.fillStyle = top; g.fillRect(0, 0, W, G.sy + 40);
+    const under = g.createLinearGradient(0, fy + s * 2, 0, fy + s * 8);
+    under.addColorStop(0, 'rgba(6,10,14,0)'); under.addColorStop(1, 'rgba(6,10,14,0.55)');
+    g.fillStyle = under; g.fillRect(0, fy + s * 2, W, H);
+  }
+  const foot = g.createLinearGradient(0, H * 0.78, 0, H);
+  foot.addColorStop(0, 'rgba(6,10,14,0)'); foot.addColorStop(1, 'rgba(6,10,14,0.45)');
+  g.fillStyle = foot; g.fillRect(0, H * 0.78, W, H * 0.22);
+}
+
+/* The hero runs on its own clock: the shipping 140 ms tick flickers at this size, so each pose
+   holds about 2 ticks (252 to 322 ms), each exercise runs about 5 to 6 s (2 to 3 reps), the jump
+   plays at 1.5x, then the badge for 2 s. */
+const HK = D.hero;
+const kfDur = (name) => HK[name].reduce((a, [, ms]) => a + ms, 0);
+function heroFrame(name, ms, slow) {
+  const kfs = HK[name], total = kfDur(name) * slow;
+  let t = ((ms % total) + total) % total;
+  for (const [f, d] of kfs) { if (t < d * slow) return f; t -= d * slow; }
+  return kfs[kfs.length - 1][0];
+}
+const EX = [
+  { anim: 'squats', ask: '20 squats?', done: '20 squats' },
+  { anim: 'lunges', ask: '12 lunges?', done: '12 lunges' },
+  { anim: 'calves', ask: '25 calf raises?', done: '25 calf raises' },
+  { anim: 'wallsit', ask: '40 s wall sit?', done: '40 s wall sit' },
+];
+const JUMP_SLOW = 1.5, JUMP_LOOPS = 2, BADGE_MS = 2000, ASK_MS = 5200;
+const LOOPS = { squats: 2, lunges: 2, calves: 2, wallsit: 1 };
+const PROG = [];
+for (const e of EX) {
+  const d = kfDur(e.anim), loops = LOOPS[e.anim] || 2;
+  const slow = Math.min(2.3, Math.max(1.8, ASK_MS / (d * loops)));
+  PROG.push({ e, phase: 'ask', ms: d * slow * loops, anim: e.anim, slow });
+  PROG.push({ e, phase: 'jump', ms: kfDur('victory') * JUMP_SLOW * JUMP_LOOPS, anim: 'victory', slow: JUMP_SLOW });
+  PROG.push({ e, phase: 'badge', ms: BADGE_MS, anim: 'badge', slow: 1 });
+}
+const PLEN = PROG.reduce((a, p) => a + p.ms, 0);
+function progAt(ms) {
+  let i = ((ms % PLEN) + PLEN) % PLEN;
+  for (const p of PROG) { if (i < p.ms) return { p, i }; i -= p.ms; }
+  return { p: PROG[0], i: 0 };
+}
+
+/* two chips, crossfaded over 400 ms */
+let front = 0, chipKey = 'ask20 squats?';
+function chipHTML(p) {
+  if (p.phase === 'badge') return `<span class="ok">✅ ${p.e.done} · bravo! 🔥</span>`;
+  return `<span class="q">${p.e.ask}</span><span class="k${p.phase === 'jump' ? ' hit' : ''}"><kbd>1</kbd>done</span><span class="k"><kbd>2</kbd>skip</span>`;
+}
+function setChip(p) {
+  const key = p.phase + p.e.ask;
+  if (key === chipKey) return; chipKey = key;
+  const back = 1 - front;
+  chips[back].innerHTML = chipHTML(p);
+  placeChip(chips[back]);
+  chips[back].classList.add('on'); chips[front].classList.remove('on');
+  front = back;
+}
+function placeChip(el) {
+  if (!G) return;
+  const cw = el.offsetWidth, ch = el.offsetHeight, m = G.main, pad = 14;
+  let left, top;
+  if (G.narrow) { left = m.x + 7 * m.s - cw / 2; top = m.y - ch - m.s * 0.3; }
+  else { left = Math.max(G.sx, m.x - cw + m.s * 1.5); top = m.y - ch - m.s * 0.9; } // never over the copy
+  left = Math.max(pad, Math.min(G.W - cw - pad, left));
+  top = Math.max(G.sy, top);
+  el.style.transform = `translate(${Math.round(left)}px, ${Math.round(top)}px)`;
+}
+let lastKey = '';
+const t0 = performance.now();
+function drawHero(force) {
+  if (!G) return;
+  let main, p = PROG[0];
+  if (still) main = HK.squats[2][0];
+  else {
+    const at = progAt(performance.now() - t0);
+    p = at.p;
+    main = heroFrame(p.anim, at.i, p.slow);
+  }
+  setChip(p);
+  const key = String(main);
+  if (!force && key === lastKey) return; // redraw only on a pose change
+  lastKey = key;
+  const g = fg.getContext('2d'), m = G.main;
+  // only Clawd's own box is cleared and redrawn
+  const bx = m.x - m.s, by = m.y - m.s, bw = 16 * m.s, bh = 10 * m.s;
+  g.setTransform(DPR, 0, 0, DPR, 0, 0);
+  g.clearRect(bx, by, bw, bh);
+  drawVoxel(g, FR[main], m.s, m.x, m.y);
+  // engrave Clawd too
+  g.globalCompositeOperation = 'source-atop';
+  g.globalAlpha = 0.5;
+  g.fillStyle = g.createPattern(ETCH, 'repeat');
+  g.fillRect(bx, by, bw, bh);
+  g.globalAlpha = 1; g.globalCompositeOperation = 'source-over';
+}
+let raf = 0;
+function heroLoop() { drawHero(false); raf = still ? 0 : requestAnimationFrame(heroLoop); }
+function heroMotion() { if (raf) cancelAnimationFrame(raf); raf = 0; drawHero(true); if (!still) raf = requestAnimationFrame(heroLoop); }
+RM.addEventListener && RM.addEventListener('change', heroMotion);
+if (window.ResizeObserver) new ResizeObserver(() => layout()).observe(hero); else window.addEventListener('resize', layout);
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(layout);
+layout();
+heroMotion();
+
+/* ---------------- the band demo */
+const bandArt = document.getElementById('bandArt');
+const bq = document.getElementById('bandQ'), bBtns = document.getElementById('bandBtns'), bHint = document.getElementById('bandHint');
+const demo = document.getElementById('demo');
+const secsEl = document.getElementById('demoSecs'), promptEl = document.getElementById('demoPrompt');
+const DEMO = [
+  { anim: 'squats', n: 20, name: 'squats' },
+  { anim: 'pushups', n: 12, name: 'push-ups' },
+  { anim: 'plank', n: 40, name: 'plank', timed: true },
+  { anim: 'jacks', n: 30, name: 'jumping jacks' },
+  { anim: 'crunches', n: 20, name: 'crunches' },
+  { anim: 'lunges', n: 12, name: 'lunges' },
+  { anim: 'wallsit', n: 35, name: 'wall sit', timed: true },
+  { anim: 'calves', n: 25, name: 'calf raises' },
+];
+const PROMPTS = ['refactor the invoice module and add tests', 'find why the nightly export drops rows', 'migrate the auth tests to the new fixtures', 'review the open PR and fix what you find'];
+let di = 0, dState = 'ask', dStart = 0, dSecs = 42, dTurn = 0, dTimers = [];
+const setName = (e) => (e.timed ? `${e.n} s ${e.name}` : `${e.n} ${e.name}`);
+function later(ms, fn) { dTimers.push(setTimeout(fn, ms)); }
+function ask() {
+  const e = DEMO[di];
+  dState = 'ask'; dStart = tick;
+  bq.textContent = e.timed ? `${setName(e)}?` : `${setName(e)}?`;
+  bq.className = 'q'; bBtns.hidden = false;
+  bHint.textContent = e.timed ? `0:${String(e.n).padStart(2, '0')} left · press 1 when done` : 'press 1 when done';
+  bandArt.setAttribute('aria-label', `Clawd doing ${e.name}`);
+}
+function answer(k) {
+  if (dState !== 'ask') return;
+  dTimers.forEach(clearTimeout); dTimers = [];
+  const e = DEMO[di];
+  if (k === 1) {
+    dState = 'jump'; dStart = tick;
+    bq.textContent = setName(e) + '?'; bBtns.hidden = true; bHint.textContent = '';
+    bandArt.setAttribute('aria-label', 'Clawd doing a victory jump');
+    later(2000, () => { dState = 'badge'; bq.textContent = `✅ ${setName(e)} · bravo! 🔥`; bq.className = 'q ok'; });
+    later(5200, nextTurn);
+  } else {
+    dState = 'skip'; bq.textContent = 'skipped — next one will be different'; bq.className = 'q';
+    bBtns.hidden = true; bHint.textContent = '';
+    later(1500, () => { dState = 'gone'; bq.textContent = ''; });
+    later(2600, nextTurn);
+  }
+}
+function nextTurn() {
+  di = (di + 1) % DEMO.length; dTurn++;
+  promptEl.textContent = PROMPTS[dTurn % PROMPTS.length];
+  dSecs = 31 + (dTurn * 7) % 20;
+  ask();
+}
+document.getElementById('btnDone').addEventListener('click', () => answer(1));
+document.getElementById('btnSkip').addEventListener('click', () => answer(2));
+let demoVisible = false;
+if (window.IntersectionObserver) new IntersectionObserver((es) => { demoVisible = es[0].isIntersecting; }, { threshold: 0.4 }).observe(demo);
+document.addEventListener('keydown', (ev) => {
+  if (ev.metaKey || ev.ctrlKey || ev.altKey || (ev.key !== '1' && ev.key !== '2')) return;
+  const el = document.activeElement;
+  if (el && (el.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName))) return;
+  if (!demoVisible && el !== demo) return;
+  answer(ev.key === '1' ? 1 : 2);
+});
+const bg2 = bandArt.getContext('2d');
+onTick((t) => {
+  const e = DEMO[di];
+  bg2.clearRect(0, 0, 14, 8);
+  if (dState === 'gone') return;
+  let f;
+  if (still) f = frameOf(dState === 'ask' || dState === 'skip' ? e.anim : dState === 'jump' ? 'victory' : 'badge', dState === 'ask' ? POSE[e.anim] : 0);
+  else if (dState === 'ask' || dState === 'skip') f = frameOf(e.anim, t - dStart);
+  else if (dState === 'jump') f = frameOf('victory', t - dStart);
+  else f = frameOf('badge', 0);
+  drawFlat(bg2, f, 1, 0, 0);
+  // seconds ticker and timed-set countdown, once per second (7 ticks ≈ 1 s)
+  if (!still && (t - dStart) % 7 === 0 && t !== dStart) {
+    dSecs++; secsEl.textContent = dSecs;
+    if (dState === 'ask' && e.timed) {
+      const left = Math.max(0, e.n - Math.floor((t - dStart) * D.tick / 1000));
+      bHint.textContent = `0:${String(left).padStart(2, '0')} left · press 1 when done`;
+    }
+  }
+});
+ask();
+
+/* ---------------- exercise tiles */
+const TILES = [
+  { anim: 'squats', name: 'Squats', range: '15–25 reps' },
+  { anim: 'pushups', name: 'Push-ups', range: '10–20 reps' },
+  { anim: 'jacks', name: 'Jumping jacks', range: '20–40 reps' },
+  { anim: 'crunches', name: 'Crunches', range: '15–25 reps' },
+  { anim: 'lunges', name: 'Lunges', range: '10–16 reps' },
+  { anim: 'calves', name: 'Calf raises', range: '20–30 reps' },
+  { anim: 'plank', name: 'Plank', range: '30–60 s', hold: 45 },
+  { anim: 'wallsit', name: 'Wall sit', range: '30–45 s', hold: 40 },
+];
+const tilesEl = document.getElementById('tiles');
+const tileCtx = TILES.map((x) => {
+  const el = document.createElement('article'); el.className = 'tile';
+  el.innerHTML = `<div class="art"><canvas width="14" height="8" role="img" aria-label="Clawd doing ${x.name.toLowerCase()}"></canvas></div><h3>${x.name}</h3><div class="meta"><span>${x.range}</span><span class="t">${x.hold ? 'held · 0:' + x.hold : ''}</span></div>`;
+  tilesEl.appendChild(el);
+  return { x, g: el.querySelector('canvas').getContext('2d'), t: el.querySelector('.t') };
+});
+onTick((t) => {
+  tileCtx.forEach(({ x, g, t: tEl }, k) => {
+    g.clearRect(0, 0, 14, 8);
+    drawFlat(g, still ? frameOf(x.anim, POSE[x.anim]) : frameOf(x.anim, t + k * 3), 1, 0, 0);
+    if (x.hold && !still) {
+      const left = x.hold - (Math.floor(t * D.tick / 1000) % (x.hold + 1));
+      tEl.textContent = 'held · 0:' + String(left).padStart(2, '0');
+    }
+  });
+});
+
+/* ---------------- level ladder (to scale: bar height = reps / 30) */
+(() => {
+  const el = document.getElementById('ladder');
+  const rows = [0, 3, 6, 9, 12, 15].map((d, i) => ({ d, lv: i + 1, m: Math.min(1.5, 1 + 0.1 * Math.floor(d / 3)) }));
+  el.innerHTML = rows.map((r) => {
+    const reps = Math.round(20 * r.m);
+    return `<div class="rung"><span class="reps">${reps}</span><div class="bar-wrap"><div class="bar" style="height:${(reps / 30 * 100).toFixed(1)}%"></div></div><span class="lv">L${r.lv} · ×${r.m.toFixed(1)}</span></div>`;
+  }).join('');
+})();
+
+/* ---------------- copy buttons */
+function selectText(el) { const s = window.getSelection(), r = document.createRange(); r.selectNodeContents(el); s.removeAllRanges(); s.addRange(r); }
+document.querySelectorAll('.copy').forEach((b) => {
+  b.addEventListener('click', () => {
+    const el = document.getElementById(b.dataset.for), text = el.textContent;
+    const done = (msg) => { b.textContent = msg; setTimeout(() => { b.textContent = 'Copy'; }, 1600); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(() => done('Copied'), () => { selectText(el); done('Selected'); });
+    } else { selectText(el); done('Selected'); }
+  });
+});
+
+setMotion();
+})();
+</script>
+
+</body>
+</html>
